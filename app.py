@@ -89,11 +89,11 @@ def inject_style():
     st.markdown("""<style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap');
     :root { --ink:#2B2620;--ink-soft:#5C5346;--page:#EEE6D6;--paper:#FBF7EE;--paper2:#F4EDDC;--clay:#B5541B;--clay-deep:#8F3F13;--olive:#5B6B4F;--olive-soft:#DCE3D3;--line:rgba(43,38,32,.14); }
-    .stApp {background:var(--page);color:var(--ink);font-family:Inter,sans-serif}.block-container{max-width:920px;padding-top:1.7rem;padding-bottom:4rem}h1,h2,h3{font-family:Fraunces,serif!important;color:var(--clay-deep)!important}h1{font-weight:600!important;letter-spacing:-.02em}
+    .stApp {background:var(--page);color:var(--ink);font-family:Inter,sans-serif}.block-container{max-width:920px;padding-top:1.7rem;padding-bottom:4rem}h1,h2,h3{font-family:Fraunces,serif!important;color:var(--clay-deep)!important}h1{font-weight:600!important;letter-spacing:-.02em}[data-testid="stSidebar"],[data-testid="stSidebarCollapsedControl"]{display:none!important}
     div[data-testid="stExpander"]{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}div[data-testid="stExpander"] details summary{padding:.75rem .9rem;font-family:Fraunces,serif;font-size:1.1rem}div[data-testid="stExpander"] details[open] summary{border-bottom:1px solid var(--line)}
     [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
-    .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:1px solid var(--line);border-radius:999px;color:var(--ink-soft)}.stPills [aria-pressed="true"]{background:var(--clay)!important;color:white!important;border-color:var(--clay)!important}
-    .recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
+    .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:2px solid var(--olive);border-radius:999px;color:var(--olive);font-weight:700;padding:6px 12px}.stPills [aria-pressed="true"]{background:var(--olive)!important;color:white!important;border-color:var(--olive)!important}
+    [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:.25rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
     </style>""", unsafe_allow_html=True)
 
 
@@ -119,19 +119,26 @@ def render_recipe(store, recipe):
     category = html.escape(recipe["categoria"] or "Sin categoría")
     state = "Receta completa" if recipe["ingredientes"] else (recipe["estado"] or "Pendiente")
     dot_class = "made" if recipe["hecha"] else ("" if recipe["ingredientes"] else "pending")
-    fit = " · FIT" if recipe["fit"] else ""
-    with st.expander(f"{recipe['nombre'] or '(sin nombre)'}{fit}"):
+    with st.container(border=True):
         st.markdown(f'''<div class="recipe-meta"><span class="cat{' empty' if not recipe['categoria'] else ''}">{category}</span><span class="stamp"><b>{platform_label(recipe['plataforma'])}</b><br>{html.escape(recipe['fecha'])}<br>{html.escape(recipe['quien'])}</span></div>''', unsafe_allow_html=True)
+        st.markdown(f'<div class="recipe-name">{html.escape(recipe["nombre"] or "(sin nombre)")}</div>', unsafe_allow_html=True)
+        selected_fit = st.pills("FIT", ["FIT"], default=["FIT"] if recipe["fit"] else [], selection_mode="multi", label_visibility="collapsed", key=f"fit_{recipe['id']}")
+        if bool(selected_fit) != recipe["fit"]:
+            updated = dict(recipe)
+            updated["fit"] = bool(selected_fit)
+            store.upsert(updated)
+            st.rerun()
         if recipe["foto"]: st.image(recipe["foto"], use_container_width=True)
         preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or recipe["estado"] or "Sin ingredientes registrados todavía"
         st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div><p class="status {dot_class}">● {html.escape(state)}</p>', unsafe_allow_html=True)
         if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
         if recipe["enlace"]: st.link_button("Ver receta original →", recipe["enlace"]); source_preview(recipe)
-        st.divider(); recipe_form(store, recipe, f"edit_{recipe['id']}")
-        if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
+        with st.expander("Editar receta y más detalles"):
+            recipe_form(store, recipe, f"edit_{recipe['id']}")
+            if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
 
 
-st.set_page_config(page_title="El recetario", page_icon="🍳", layout="wide")
+st.set_page_config(page_title="El recetario", page_icon="🍳", layout="wide", initial_sidebar_state="collapsed")
 inject_style()
 store, storage_name = get_store()
 try:
@@ -142,8 +149,13 @@ except Exception as exc:
 st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
 st.caption(f"{len(recipes)} recetas · {storage_name}")
 if imported: st.success("Recetas iniciales importadas.")
-if st.button("↻ Actualizar cambios", key="refresh"):
-    st.rerun()
+action_left, action_right, _ = st.columns([1, 1, 5])
+with action_left:
+    if st.button("↻ Actualizar", key="refresh"):
+        st.rerun()
+with action_right:
+    if st.button("＋ Nueva receta", key="new_recipe_button"):
+        st.session_state.show_new_recipe = not st.session_state.get("show_new_recipe", False)
 search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed")
 categories = sorted({r["categoria"] for r in recipes if r["categoria"]})
 selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed")
@@ -153,8 +165,9 @@ def matches(recipe):
     return (not query or query in haystack) and (selected != "FIT" or recipe["fit"]) and (selected in ("Todas", "FIT") or recipe["categoria"] == selected)
 visible = [r for r in recipes if matches(r)]
 st.caption(f"{len(visible)} de {len(recipes)} recetas")
-with st.expander("＋ Nueva receta"):
-    recipe_form(store, {"id":str(uuid.uuid4()),"fecha":date.today().strftime("%-d/%-m/%y"),"plataforma":"Manual","estado":"Añadida a mano"}, "new_recipe", True)
+if st.session_state.get("show_new_recipe", False):
+    with st.expander("Nueva receta", expanded=True):
+        recipe_form(store, {"id":str(uuid.uuid4()),"fecha":date.today().strftime("%-d/%-m/%y"),"plataforma":"Manual","estado":"Añadida a mano"}, "new_recipe", True)
 for start in range(0, len(visible), 2):
     left, right = st.columns(2)
     with left: render_recipe(store, visible[start])
