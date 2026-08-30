@@ -124,10 +124,10 @@ def source_preview(recipe):
     la red original, pero de forma perezosa (ver _lazy_embed_script) para que el listado
     siga cargando rápido.
 
-    Nota sobre Facebook: su plugin de vídeo (plugins/video.php) solo soporta el formato
-    clásico facebook.com/videos/... — no incrusta Reels (/reel/...) ni enlaces "compartir"
-    (/share/...), que es como llegan casi todos los enlaces de Facebook guardados aquí.
-    En esos casos se avisa en vez de mostrar un iframe roto en blanco."""
+    Nota sobre Facebook: su plugin de vídeo (plugins/video.php) sí soporta facebook.com/reel/...
+    (verificado a mano). Lo que falla son los enlaces "compartir" (/share/...): esos exigen
+    iniciar sesión incluso solo para ver la página, así que no hay forma de incrustarlos sin
+    una sesión real. En ese caso se avisa en vez de mostrar un iframe roto en blanco."""
     url = recipe["enlace"]
     if not url: return
     platform = recipe["plataforma"]
@@ -138,9 +138,11 @@ def source_preview(recipe):
         components.html(f'''<blockquote id="embed" class="tiktok-embed" cite="{html.escape(url, quote=True)}" style="max-width:605px;min-width:325px"><section></section></blockquote>
 {_lazy_embed_script("#embed", "https://www.tiktok.com/embed.js")}''', height=740, scrolling=True)
     elif platform == "Facebook":
-        if "/reel/" in url or "/share/" in url:
-            st.markdown('<p class="source-note">Vista previa no disponible: Facebook no permite incrustar Reels ni enlaces "compartir". Usa «Ver receta original» para verla.</p>', unsafe_allow_html=True)
+        if "/share/" in url:
+            st.markdown('<p class="source-note">Vista previa no disponible: los enlaces "compartir" de Facebook exigen iniciar sesión, así que no se pueden incrustar. Usa «Ver receta original» para verla.</p>', unsafe_allow_html=True)
         else:
+            # facebook.com/reel/... sí lo soporta plugins/video.php (verificado a mano) — el
+            # problema real eran los enlaces /share/..., no los Reels en sí.
             components.html(f'<iframe src="https://www.facebook.com/plugins/video.php?href={quote(url, safe="")}&show_text=false" width="100%" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true"></iframe>', height=430)
     elif "youtube.com" in url or "youtu.be" in url:
         video = url.split("youtu.be/")[-1].split("?")[0] if "youtu.be/" in url else url.split("v=")[-1].split("&")[0]
