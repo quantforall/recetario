@@ -105,29 +105,41 @@ def visible_title(recipe):
 
 
 def source_preview(recipe):
-    """Mantiene las vistas previas de Instagram, Facebook y YouTube del HTML original."""
+    """Vistas previas de Instagram, Facebook y YouTube. Se cargan solas, como en la red
+    original, pero de forma perezosa: el contenido pesado no se pide hasta que la tarjeta
+    entra en pantalla, así el listado sigue cargando rápido aunque haya muchas recetas."""
     url = recipe["enlace"]
     if not url: return
     if recipe["plataforma"] == "Instagram":
-        components.html(f'''<blockquote class="instagram-media" data-instgrm-permalink="{html.escape(url, quote=True)}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:10px;margin:0;max-width:540px;min-width:326px;padding:0;width:99.375%"></blockquote><script async src="https://www.instagram.com/embed.js"></script>''', height=520, scrolling=True)
+        components.html(f'''<blockquote id="ig-embed" class="instagram-media" data-instgrm-permalink="{html.escape(url, quote=True)}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:10px;margin:0;max-width:540px;min-width:326px;padding:0;width:99.375%"></blockquote>
+<script>
+new IntersectionObserver((entries, obs) => {{
+  if (!entries[0].isIntersecting) return;
+  obs.disconnect();
+  const s = document.createElement("script");
+  s.async = true; s.src = "https://www.instagram.com/embed.js";
+  document.body.appendChild(s);
+}}, {{rootMargin: "200px"}}).observe(document.getElementById("ig-embed"));
+</script>''', height=520, scrolling=True)
     elif recipe["plataforma"] == "Facebook":
-        components.html(f'<iframe src="https://www.facebook.com/plugins/video.php?href={quote(url, safe="")}&show_text=false" width="100%" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>', height=430)
+        components.html(f'<iframe src="https://www.facebook.com/plugins/video.php?href={quote(url, safe="")}&show_text=false" width="100%" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true"></iframe>', height=430)
     elif "youtube.com" in url or "youtu.be" in url:
         video = url.split("youtu.be/")[-1].split("?")[0] if "youtu.be/" in url else url.split("v=")[-1].split("&")[0]
-        components.html(f'<iframe width="100%" height="315" src="https://www.youtube.com/embed/{html.escape(video)}" frameborder="0" allowfullscreen></iframe>', height=325)
+        components.html(f'<iframe width="100%" height="315" src="https://www.youtube.com/embed/{html.escape(video)}" frameborder="0" loading="lazy" allowfullscreen></iframe>', height=325)
 
 
 def inject_style():
     st.markdown("""<style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap');
-    :root { --ink:#2B2620;--ink-soft:#5C5346;--page:#EEE6D6;--paper:#FBF7EE;--paper2:#F4EDDC;--clay:#B5541B;--clay-deep:#8F3F13;--olive:#5B6B4F;--olive-soft:#DCE3D3;--line:rgba(43,38,32,.14); }
+    :root { --ink:#2B2620;--ink-soft:#5C5346;--page:#EEE6D6;--paper:#FBF7EE;--paper2:#F4EDDC;--clay:#B5541B;--clay-deep:#8F3F13;--olive:#5B6B4F;--olive-deep:#41503A;--olive-soft:#DCE3D3;--line:rgba(43,38,32,.14);--danger:#DC2626;--danger-deep:#B91C1C; }
     .stApp {background:var(--page);color:var(--ink);font-family:Inter,sans-serif}.block-container{max-width:920px;padding-top:1.7rem;padding-bottom:4rem}h1,h2,h3{font-family:Fraunces,serif!important;color:var(--clay-deep)!important}h1{font-weight:600!important;letter-spacing:-.02em}[data-testid="stSidebar"],[data-testid="stSidebarCollapsedControl"]{display:none!important}
     div[data-testid="stExpander"]{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}div[data-testid="stExpander"] details summary{padding:.75rem .9rem;font-family:Fraunces,serif;font-size:1.1rem}div[data-testid="stExpander"] details[open] summary{border-bottom:1px solid var(--line)}
     [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
     .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600;white-space:nowrap}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:2px solid var(--olive);border-radius:999px;color:var(--olive);font-weight:700;padding:6px 12px}.stPills [aria-pressed="true"]{background:var(--olive)!important;color:white!important;border-color:var(--olive)!important}
-    [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:-.35rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.source-action-space{height:.7rem}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
-    header[data-testid="stHeader"]{background:var(--page)!important;border-bottom:1px solid var(--line)}header[data-testid="stHeader"]:before{content:"El recetario";position:absolute;left:1rem;top:.45rem;font-family:Fraunces,serif;font-weight:600;font-size:1.45rem;color:var(--clay-deep);z-index:1000} [data-testid="stVerticalBlock"]:has(.recetario-sticky-marker){position:sticky;top:0;z-index:90;background:var(--page);padding:8px 0 10px;border-bottom:1px solid var(--line)}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker),div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker),div[data-testid="stHorizontalBlock"]:has(.source-actions-marker){flex-wrap:nowrap!important;gap:.45rem!important}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker)>div,div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker)>div,div[data-testid="stHorizontalBlock"]:has(.source-actions-marker)>div{min-width:0!important}.recipe-grid-marker{display:none}
-    @media(max-width:600px){.block-container{padding-left:16px;padding-right:16px;padding-top:.45rem}header[data-testid="stHeader"]:before{font-size:1.2rem;top:.55rem}.stPills [data-baseweb="tag"]{font-size:.58rem!important;padding:2px 4px!important;letter-spacing:0!important;margin:0!important}.stPills [data-baseweb="tag"] span{line-height:1!important}.stButton button,[data-testid="stLinkButton"] a{font-size:.82rem;padding:.55rem .45rem}.recipe-name{font-size:1.5rem}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker){flex-direction:column!important;gap:.75rem!important}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker)>div{width:100%!important;flex:1 1 100%!important}.source-action-space{height:.55rem}}
+    [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:-.35rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive-deep);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.source-action-space{height:.7rem}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
+    div[data-testid="stVerticalBlock"]:has(> div[data-testid="stElementContainer"] .delete-confirm-marker) [data-testid="stButton"] button{background:var(--danger)!important;color:#fff!important}div[data-testid="stVerticalBlock"]:has(> div[data-testid="stElementContainer"] .delete-confirm-marker) [data-testid="stButton"] button:hover{background:var(--danger-deep)!important}
+    header[data-testid="stHeader"]{background:var(--page)!important;border-bottom:1px solid var(--line)}header[data-testid="stHeader"]:before{content:"El recetario";position:absolute;left:1rem;top:.45rem;font-family:Fraunces,serif;font-weight:600;font-size:1.45rem;color:var(--clay-deep);z-index:1000}div[data-testid="stElementContainer"]:has(.actions-row-marker),div[data-testid="stElementContainer"]:has(.recipe-chip-marker),div[data-testid="stElementContainer"]:has(.recipe-grid-marker),div[data-testid="stElementContainer"]:has(.recetario-sticky-marker),div[data-testid="stElementContainer"]:has(.delete-confirm-marker){display:none!important}[data-testid="stVerticalBlock"]:has(.recetario-sticky-marker){position:sticky;top:0;z-index:90;background:var(--page);padding:8px 0 10px;border-bottom:1px solid var(--line)}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker),div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker){flex-wrap:nowrap!important;gap:.45rem!important}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker)>div,div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker)>div{min-width:0!important}
+    @media(max-width:600px){.block-container{padding-left:16px;padding-right:16px;padding-top:.45rem}header[data-testid="stHeader"]:before{font-size:1.2rem;top:.55rem}.stPills [data-baseweb="tag"]{font-size:.72rem!important;padding:6px 10px!important;min-height:30px;letter-spacing:0!important;margin:0!important}.stPills [data-baseweb="tag"] span{line-height:1.2!important}.stButton button,[data-testid="stLinkButton"] a{font-size:.88rem;padding:.68rem .6rem;min-height:44px}.recipe-name{font-size:1.5rem}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker){flex-direction:column!important;gap:.75rem!important}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker)>div{width:100%!important;flex:1 1 100%!important}.source-action-space{height:.55rem}}
     </style>""", unsafe_allow_html=True)
 
 
@@ -139,15 +151,18 @@ def recipe_form(store, recipe, key, new=False):
         notes = st.text_area("Vuestras notas", recipe.get("notas", ""), height=80, placeholder="Cambios que hicisteis, si merece la pena repetirla…")
         st.caption("Detalles de origen")
         category = st.text_input("Categoría", recipe.get("categoria", "")); author = st.text_input("Quién la añade", recipe.get("quien", "")); source_date = st.text_input("Fecha", recipe.get("fecha", "")); tags = st.text_input("Ingredientes principales / etiquetas", recipe.get("ingredientes_principales", ""))
-        submitted = st.form_submit_button("Guardar receta", type="primary")
+        submitted = st.form_submit_button("Guardar receta", type="primary", icon=":material/save:")
     if submitted:
-        if not name.strip(): st.error("Ponle un nombre a la receta."); return
-        store.upsert(normalize({"id":recipe.get("id",str(uuid.uuid4())),"nombre":name.strip(),"ingCompletos":ingredients,"hecha":recipe.get("hecha", False),"fit":recipe.get("fit", False),"enlace":source_url.strip(),"foto":recipe.get("foto", ""),"notas":notes,"categoria":category.strip(),"quien":author.strip(),"plataforma":recipe.get("plataforma", "Manual"),"fecha":source_date.strip(),"estado":recipe.get("estado", ""),"ingPrincipales":tags.strip()})); st.rerun()
+        if not name.strip(): st.error("Ponle un nombre a la receta.", icon=":material/error:"); return
+        with st.spinner("Guardando…"):
+            store.upsert(normalize({"id":recipe.get("id",str(uuid.uuid4())),"nombre":name.strip(),"ingCompletos":ingredients,"hecha":recipe.get("hecha", False),"fit":recipe.get("fit", False),"enlace":source_url.strip(),"foto":recipe.get("foto", ""),"notas":notes,"categoria":category.strip(),"quien":author.strip(),"plataforma":recipe.get("plataforma", "Manual"),"fecha":source_date.strip(),"estado":recipe.get("estado", ""),"ingPrincipales":tags.strip()}))
+        st.rerun()
 
 
 def render_recipe(store, recipe):
     category = html.escape(recipe["categoria"] or "Sin categoría")
     category_class = " empty" if not recipe["categoria"] else ""
+    title = visible_title(recipe)
     with st.container(border=True):
         category_column, fit_column = st.columns([3, 1])
         with category_column:
@@ -156,32 +171,40 @@ def render_recipe(store, recipe):
         with fit_column:
             selected_fit = st.pills("FIT", ["FIT"], default=["FIT"] if recipe["fit"] else [], selection_mode="multi", label_visibility="collapsed", key=f"fit_{recipe['id']}")
             if bool(selected_fit) != recipe["fit"]:
-                updated = dict(recipe)
-                updated["fit"] = bool(selected_fit)
-                store.upsert(updated)
+                updated = dict(recipe); updated["fit"] = bool(selected_fit)
+                with st.spinner("Guardando…"): store.upsert(updated)
                 st.rerun()
-        st.markdown(f'<div class="recipe-name">{html.escape(visible_title(recipe))}</div>', unsafe_allow_html=True)
-        if recipe["foto"]: st.image(recipe["foto"], use_container_width=True)
+        st.markdown(f'<div class="recipe-name">{html.escape(title)}</div>', unsafe_allow_html=True)
+        if recipe["foto"]:
+            st.markdown(f'<img src="{html.escape(recipe["foto"], quote=True)}" alt="{html.escape(title)}" loading="lazy" style="width:100%;border-radius:10px;display:block" onerror="this.style.display=\'none\'">', unsafe_allow_html=True)
         preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or "Sin ingredientes"
         st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div>', unsafe_allow_html=True)
         if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
         if recipe["enlace"]:
             st.markdown('<div class="source-action-space"></div>', unsafe_allow_html=True)
-            source_column, video_column = st.columns(2)
-            with source_column:
-                st.markdown('<div class="source-actions-marker"></div>', unsafe_allow_html=True)
-                st.link_button("Ver receta original →", recipe["enlace"])
-            with video_column:
-                video_key = f"video_{recipe['id']}"
-                if not st.session_state.get(video_key, False):
-                    if st.button("Cargar vídeo", key=f"load_{recipe['id']}"):
-                        st.session_state[video_key] = True
-                        st.rerun()
-            if st.session_state.get(video_key, False):
-                source_preview(recipe)
+            st.link_button("Ver receta original", recipe["enlace"], icon=":material/open_in_new:", use_container_width=True)
+            source_preview(recipe)
         with st.expander("Editar receta y más detalles"):
             recipe_form(store, recipe, f"edit_{recipe['id']}")
-            if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
+            confirm_key = f"confirm_delete_{recipe['id']}"
+            if not st.session_state.get(confirm_key, False):
+                if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}", icon=":material/delete:"):
+                    st.session_state[confirm_key] = True
+                    st.rerun()
+            else:
+                st.warning(f"¿Eliminar «{title}»? No se puede deshacer.", icon=":material/warning:")
+                cancel_column, confirm_column = st.columns(2)
+                with cancel_column:
+                    st.markdown('<div class="actions-row-marker"></div>', unsafe_allow_html=True)
+                    if st.button("Cancelar", key=f"cancel_{recipe['id']}", use_container_width=True):
+                        st.session_state[confirm_key] = False
+                        st.rerun()
+                with confirm_column:
+                    st.markdown('<div class="delete-confirm-marker"></div>', unsafe_allow_html=True)
+                    if st.button("Sí, eliminar", key=f"confirm_{recipe['id']}", icon=":material/delete_forever:", use_container_width=True):
+                        with st.spinner("Eliminando…"): store.delete(recipe["id"])
+                        st.session_state.pop(confirm_key, None)
+                        st.rerun()
 
 
 st.set_page_config(page_title="El recetario", page_icon="🍳", layout="wide", initial_sidebar_state="collapsed")
@@ -199,15 +222,15 @@ with st.container():
     action_left, action_right = st.columns(2)
     with action_left:
         st.markdown('<div class="actions-row-marker"></div>', unsafe_allow_html=True)
-        if st.button("↻ Actualizar", key="refresh", use_container_width=True):
-            complete_missing_from_excel(store)
+        if st.button("Actualizar", key="refresh", icon=":material/refresh:", use_container_width=True):
+            with st.spinner("Actualizando…"): complete_missing_from_excel(store)
             st.rerun()
     with action_right:
-        if st.button("＋ Nueva receta", key="new_recipe_button", use_container_width=True):
+        if st.button("Nueva receta", key="new_recipe_button", icon=":material/add:", use_container_width=True):
             st.session_state.show_new_recipe = not st.session_state.get("show_new_recipe", False)
-    search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed")
+    search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed", icon=":material/search:", key="search_query")
     categories = sorted({r["categoria"] for r in recipes if r["categoria"]})
-    selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed")
+    selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed", key="category_filter")
 query = search.lower().strip()
 def matches(recipe):
     haystack = " ".join(str(recipe.get(field, "")) for field in ("nombre", "ingredientes", "ingredientes_principales", "notas")).lower()
@@ -217,6 +240,19 @@ st.caption(f"{len(visible)} de {len(recipes)} recetas")
 if st.session_state.get("show_new_recipe", False):
     with st.expander("Nueva receta", expanded=True):
         recipe_form(store, {"id":str(uuid.uuid4()),"fecha":date.today().strftime("%-d/%-m/%y"),"plataforma":"Manual","estado":"Añadida a mano"}, "new_recipe", True)
+
+if not recipes:
+    with st.container(border=True):
+        st.markdown("##### Aún no hay recetas")
+        st.write("Añade la primera con el botón “Nueva receta” de arriba.")
+elif not visible:
+    with st.container(border=True):
+        st.markdown("##### Ninguna receta coincide")
+        st.write("Prueba con otra palabra o quita el filtro de categoría.")
+        if st.button("Quitar filtros", key="reset_filters", icon=":material/filter_alt_off:"):
+            st.session_state.search_query = ""
+            st.session_state.category_filter = "Todas"
+            st.rerun()
 
 page_size = 12
 if "recipes_visible_count" not in st.session_state:
@@ -230,6 +266,6 @@ for start in range(0, len(visible_page), 2):
     if start + 1 < len(visible_page):
         with right: render_recipe(store, visible_page[start + 1])
 if len(visible_page) < len(visible):
-    if st.button("Cargar más recetas", key="load_more_recipes"):
+    if st.button("Cargar más recetas", key="load_more_recipes", icon=":material/expand_more:"):
         st.session_state.recipes_visible_count += page_size
         st.rerun()
