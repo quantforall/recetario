@@ -126,8 +126,8 @@ def inject_style():
     [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
     .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600;white-space:nowrap}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:2px solid var(--olive);border-radius:999px;color:var(--olive);font-weight:700;padding:6px 12px}.stPills [aria-pressed="true"]{background:var(--olive)!important;color:white!important;border-color:var(--olive)!important}
     [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:-.35rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.source-action-space{height:.7rem}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
-    [data-testid="stVerticalBlock"]:has(.recetario-sticky-marker){position:sticky;top:0;z-index:90;background:var(--page);padding:10px 0 12px;border-bottom:1px solid var(--line)}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker),div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker),div[data-testid="stHorizontalBlock"]:has(.source-actions-marker){flex-wrap:nowrap!important;gap:.5rem!important}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker)>div,div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker)>div,div[data-testid="stHorizontalBlock"]:has(.source-actions-marker)>div{min-width:0!important}.source-action-space{height:.7rem}
-    @media(max-width:600px){.block-container{padding-left:16px;padding-right:16px;padding-top:.75rem}h1{font-size:2.5rem!important;margin-bottom:.15rem!important}.stPills [data-baseweb="tag"]{font-size:.66rem;padding:3px 6px;letter-spacing:0}.stPills [data-baseweb="tag"] span{line-height:1.05}.stButton button,[data-testid="stLinkButton"] a{font-size:.86rem;padding:.55rem .6rem}.recipe-name{font-size:1.45rem}.source-action-space{height:.55rem}}
+    header[data-testid="stHeader"]{background:var(--page)!important;border-bottom:1px solid var(--line)}header[data-testid="stHeader"]:before{content:"El recetario";position:absolute;left:1rem;top:.45rem;font-family:Fraunces,serif;font-weight:600;font-size:1.45rem;color:var(--clay-deep);z-index:1000} [data-testid="stVerticalBlock"]:has(.recetario-sticky-marker){position:sticky;top:0;z-index:90;background:var(--page);padding:8px 0 10px;border-bottom:1px solid var(--line)}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker),div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker),div[data-testid="stHorizontalBlock"]:has(.source-actions-marker){flex-wrap:nowrap!important;gap:.45rem!important}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker)>div,div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker)>div,div[data-testid="stHorizontalBlock"]:has(.source-actions-marker)>div{min-width:0!important}.recipe-grid-marker{display:none}
+    @media(max-width:600px){.block-container{padding-left:16px;padding-right:16px;padding-top:.45rem}header[data-testid="stHeader"]:before{font-size:1.2rem;top:.55rem}.stPills [data-baseweb="tag"]{font-size:.58rem!important;padding:2px 4px!important;letter-spacing:0!important;margin:0!important}.stPills [data-baseweb="tag"] span{line-height:1!important}.stButton button,[data-testid="stLinkButton"] a{font-size:.82rem;padding:.55rem .45rem}.recipe-name{font-size:1.5rem}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker){flex-direction:column!important;gap:.75rem!important}div[data-testid="stHorizontalBlock"]:has(.recipe-grid-marker)>div{width:100%!important;flex:1 1 100%!important}.source-action-space{height:.55rem}}
     </style>""", unsafe_allow_html=True)
 
 
@@ -149,7 +149,7 @@ def render_recipe(store, recipe):
     category = html.escape(recipe["categoria"] or "Sin categoría")
     category_class = " empty" if not recipe["categoria"] else ""
     with st.container(border=True):
-        category_column, fit_column = st.columns([5, 1])
+        category_column, fit_column = st.columns([3, 1])
         with category_column:
             st.markdown('<div class="recipe-chip-marker"></div>', unsafe_allow_html=True)
             st.markdown(f'<span class="cat{category_class}">{category}</span>', unsafe_allow_html=True)
@@ -194,7 +194,6 @@ except Exception as exc:
 
 with st.container():
     st.markdown('<div class="recetario-sticky-marker"></div>', unsafe_allow_html=True)
-    st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
     st.caption(f"{len(recipes)} recetas")
     if imported: st.success("Recetas iniciales importadas.")
     action_left, action_right = st.columns(2)
@@ -225,7 +224,9 @@ if "recipes_visible_count" not in st.session_state:
 visible_page = visible[:st.session_state.recipes_visible_count]
 for start in range(0, len(visible_page), 2):
     left, right = st.columns(2)
-    with left: render_recipe(store, visible_page[start])
+    with left:
+        st.markdown('<div class="recipe-grid-marker"></div>', unsafe_allow_html=True)
+        render_recipe(store, visible_page[start])
     if start + 1 < len(visible_page):
         with right: render_recipe(store, visible_page[start + 1])
 if len(visible_page) < len(visible):
