@@ -121,18 +121,14 @@ def recipe_form(store, recipe, key, new=False):
     with st.form(key, clear_on_submit=new):
         name = st.text_input("Nombre de la receta *", recipe.get("nombre", ""))
         ingredients = st.text_area("Ingredientes", recipe.get("ingredientes", ""), height=130, placeholder="Añade o corrige los ingredientes…")
-        c1, c2 = st.columns(2)
-        with c1: made = st.checkbox("Ya la hemos hecho", bool(recipe.get("hecha", False)))
-        with c2: is_fit = st.checkbox("FIT", bool(recipe.get("fit", False)))
         source_url = st.text_input("Enlace original", recipe.get("enlace", ""), placeholder="https://…")
-        photo = st.text_input("Enlace de foto (opcional)", recipe.get("foto", ""), placeholder="https://…")
         notes = st.text_area("Vuestras notas", recipe.get("notas", ""), height=80, placeholder="Cambios que hicisteis, si merece la pena repetirla…")
         st.caption("Detalles de origen")
-        category = st.text_input("Categoría", recipe.get("categoria", "")); author = st.text_input("Quién la añade", recipe.get("quien", "")); platform = st.text_input("Plataforma", recipe.get("plataforma", "Manual")); source_date = st.text_input("Fecha", recipe.get("fecha", "")); status = st.text_input("Estado", recipe.get("estado", "")); tags = st.text_input("Ingredientes principales / etiquetas", recipe.get("ingredientes_principales", ""))
+        category = st.text_input("Categoría", recipe.get("categoria", "")); author = st.text_input("Quién la añade", recipe.get("quien", "")); source_date = st.text_input("Fecha", recipe.get("fecha", "")); tags = st.text_input("Ingredientes principales / etiquetas", recipe.get("ingredientes_principales", ""))
         submitted = st.form_submit_button("Guardar receta", type="primary")
     if submitted:
         if not name.strip(): st.error("Ponle un nombre a la receta."); return
-        store.upsert(normalize({"id":recipe.get("id",str(uuid.uuid4())),"nombre":name.strip(),"ingCompletos":ingredients,"hecha":made,"fit":is_fit,"enlace":source_url.strip(),"foto":photo.strip(),"notas":notes,"categoria":category.strip(),"quien":author.strip(),"plataforma":platform.strip(),"fecha":source_date.strip(),"estado":status.strip(),"ingPrincipales":tags.strip()})); st.rerun()
+        store.upsert(normalize({"id":recipe.get("id",str(uuid.uuid4())),"nombre":name.strip(),"ingCompletos":ingredients,"hecha":recipe.get("hecha", False),"fit":recipe.get("fit", False),"enlace":source_url.strip(),"foto":recipe.get("foto", ""),"notas":notes,"categoria":category.strip(),"quien":author.strip(),"plataforma":recipe.get("plataforma", "Manual"),"fecha":source_date.strip(),"estado":recipe.get("estado", ""),"ingPrincipales":tags.strip()})); st.rerun()
 
 
 def render_recipe(store, recipe):
