@@ -1,42 +1,29 @@
 from __future__ import annotations
 
+import html
 import json
 import sqlite3
 import uuid
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 ROOT = Path(__file__).parent
 DATA_FILE = ROOT / "data" / "recipes.json"
 SQLITE_FILE = ROOT / "recetario.db"
-
-FIELDS = [
-    "id", "fecha", "quien", "plataforma", "nombre", "categoria",
-    "ingredientes_principales", "ingredientes", "notas_origen", "enlace",
-    "estado", "fit", "hecha", "foto", "notas",
-]
+FIELDS = ["id", "fecha", "quien", "plataforma", "nombre", "categoria", "ingredientes_principales", "ingredientes", "notas_origen", "enlace", "estado", "fit", "hecha", "foto", "notas"]
 
 
 def normalize(recipe: dict) -> dict:
-    """Adapta el formato del HTML original al de la aplicación."""
     return {
-        "id": str(recipe.get("id", uuid.uuid4())),
-        "fecha": recipe.get("fecha", ""),
-        "quien": recipe.get("quien", ""),
-        "plataforma": recipe.get("plataforma", ""),
-        "nombre": recipe.get("nombre", "(sin nombre)"),
-        "categoria": recipe.get("categoria", ""),
-        "ingredientes_principales": recipe.get("ingredientes_principales", recipe.get("ingPrincipales", "")),
-        "ingredientes": recipe.get("ingredientes", recipe.get("ingCompletos", "")),
-        "notas_origen": recipe.get("notas_origen", recipe.get("notasChat", "")),
-        "enlace": recipe.get("enlace", ""),
-        "estado": recipe.get("estado", ""),
-        "fit": bool(recipe.get("fit", False)),
-        "hecha": bool(recipe.get("hecha", False)),
-        "foto": recipe.get("foto", ""),
-        "notas": recipe.get("notas", ""),
+        "id": str(recipe.get("id", uuid.uuid4())), "fecha": recipe.get("fecha", ""), "quien": recipe.get("quien", ""),
+        "plataforma": recipe.get("plataforma", ""), "nombre": recipe.get("nombre", "(sin nombre)"), "categoria": recipe.get("categoria", ""),
+        "ingredientes_principales": recipe.get("ingredientes_principales", recipe.get("ingPrincipales", "")), "ingredientes": recipe.get("ingredientes", recipe.get("ingCompletos", "")),
+        "notas_origen": recipe.get("notas_origen", recipe.get("notasChat", "")), "enlace": recipe.get("enlace", ""), "estado": recipe.get("estado", ""),
+        "fit": bool(recipe.get("fit", False)), "hecha": bool(recipe.get("hecha", False)), "foto": recipe.get("foto", ""), "notas": recipe.get("notas", ""),
     }
 
 
@@ -44,47 +31,29 @@ class SQLiteStore:
     def __init__(self):
         self.db = sqlite3.connect(SQLITE_FILE, check_same_thread=False)
         self.db.row_factory = sqlite3.Row
-        columns = ", ".join(
-            f"{field} {'integer' if field in ('fit', 'hecha') else 'text'}"
-            for field in FIELDS
-        )
+        columns = ", ".join(f"{f} {'integer' if f in ('fit', 'hecha') else 'text'}" for f in FIELDS)
         self.db.execute(f"create table if not exists recipes ({columns}, primary key (id))")
         self.db.commit()
-
-    def all(self):
-        return [dict(row) for row in self.db.execute("select * from recipes order by nombre collate nocase")]
-
-    def count(self):
-        return self.db.execute("select count(*) from recipes").fetchone()[0]
-
+    def all(self): return [dict(row) for row in self.db.execute("select * from recipes order by nombre collate nocase")]
+    def count(self): return self.db.execute("select count(*) from recipes").fetchone()[0]
     def upsert(self, recipe):
-        values = [int(recipe[field]) if field in ("fit", "hecha") else recipe[field] for field in FIELDS]
-        placeholders = ", ".join("?" for _ in FIELDS)
-        updates = ", ".join(f"{field}=excluded.{field}" for field in FIELDS if field != "id")
-        self.db.execute(f"insert into recipes ({', '.join(FIELDS)}) values ({placeholders}) on conflict(id) do update set {updates}", values)
+        values = [int(recipe[f]) if f in ("fit", "hecha") else recipe[f] for f in FIELDS]
+        marks = ", ".join("?" for _ in FIELDS)
+        updates = ", ".join(f"{f}=excluded.{f}" for f in FIELDS if f != "id")
+        self.db.execute(f"insert into recipes ({', '.join(FIELDS)}) values ({marks}) on conflict(id) do update set {updates}", values)
         self.db.commit()
-
     def delete(self, recipe_id):
-        self.db.execute("delete from recipes where id=?", (recipe_id,))
-        self.db.commit()
+        self.db.execute("delete from recipes where id=?", (recipe_id,)); self.db.commit()
 
 
 class SupabaseStore:
     def __init__(self, url, key):
         from supabase import create_client
         self.client = create_client(url, key)
-
-    def all(self):
-        return self.client.table("recipes").select("*").order("nombre").execute().data
-
-    def count(self):
-        return len(self.client.table("recipes").select("id").execute().data)
-
-    def upsert(self, recipe):
-        self.client.table("recipes").upsert(recipe).execute()
-
-    def delete(self, recipe_id):
-        self.client.table("recipes").delete().eq("id", recipe_id).execute()
+    def all(self): return self.client.table("recipes").select("*").order("nombre").execute().data
+    def count(self): return len(self.client.table("recipes").select("id").execute().data)
+    def upsert(self, recipe): self.client.table("recipes").upsert(recipe).execute()
+    def delete(self, recipe_id): self.client.table("recipes").delete().eq("id", recipe_id).execute()
 
 
 def get_store():
@@ -93,126 +62,101 @@ def get_store():
     return SQLiteStore(), "SQLite local (solo pruebas)"
 
 
-def require_password():
-    password = st.secrets.get("access_password", "")
-    if not password:
-        return
-    if st.session_state.get("allowed"):
-        return
-    st.title("El recetario")
-    entered = st.text_input("Contraseña", type="password")
-    if st.button("Entrar"):
-        if entered == password:
-            st.session_state.allowed = True
-            st.rerun()
-        st.error("Contraseña incorrecta")
-    st.stop()
-
-
 def seed(store):
-    if store.count():
-        return False
-    recipes = [normalize(item) for item in json.loads(DATA_FILE.read_text())]
-    for recipe in recipes:
-        store.upsert(recipe)
+    if store.count(): return False
+    for source in json.loads(DATA_FILE.read_text()): store.upsert(normalize(source))
     return True
 
 
-def recipe_form(store, recipe: dict, key: str, is_new=False):
-    with st.form(key, clear_on_submit=is_new):
-        left, right = st.columns(2)
-        with left:
-            name = st.text_input("Nombre *", recipe.get("nombre", ""))
-            category = st.text_input("Categoría", recipe.get("categoria", ""))
-            author = st.text_input("Añadida por", recipe.get("quien", ""))
-        with right:
-            platform = st.text_input("Plataforma", recipe.get("plataforma", "Manual"))
-            source_date = st.text_input("Fecha", recipe.get("fecha", ""))
-            status = st.text_input("Estado", recipe.get("estado", ""))
-        ingredients = st.text_area("Ingredientes", recipe.get("ingredientes", ""), height=140)
-        main_ingredients = st.text_input("Ingredientes principales / etiquetas", recipe.get("ingredientes_principales", ""))
-        source_url = st.text_input("Enlace original", recipe.get("enlace", ""))
-        photo = st.text_input("Enlace de foto", recipe.get("foto", ""))
-        notes = st.text_area("Notas vuestras", recipe.get("notas", ""), height=100)
-        done, fit = st.columns(2)
-        with done:
-            made = st.checkbox("Ya la hemos hecho", bool(recipe.get("hecha", False)))
-        with fit:
-            is_fit = st.checkbox("FIT", bool(recipe.get("fit", False)))
-        saved = st.form_submit_button("Guardar receta", type="primary")
-    if saved:
-        if not name.strip():
-            st.error("La receta necesita un nombre.")
-            return
-        updated = normalize({
-            "id": recipe.get("id", str(uuid.uuid4())), "nombre": name.strip(),
-            "categoria": category.strip(), "quien": author.strip(), "plataforma": platform.strip(),
-            "fecha": source_date.strip(), "estado": status.strip(), "ingCompletos": ingredients,
-            "ingPrincipales": main_ingredients, "enlace": source_url.strip(), "foto": photo.strip(),
-            "notas": notes, "hecha": made, "fit": is_fit,
-        })
-        store.upsert(updated)
-        st.success("Receta guardada.")
-        st.rerun()
+def platform_label(platform):
+    return {"Instagram":"IG", "Facebook":"FB", "YouTube":"YT", "TikTok":"TT", "Manual":"A MANO"}.get(platform, "WEB")
+
+
+def source_preview(recipe):
+    """Mantiene las vistas previas de Instagram, Facebook y YouTube del HTML original."""
+    url = recipe["enlace"]
+    if not url: return
+    if recipe["plataforma"] == "Instagram":
+        components.html(f'''<blockquote class="instagram-media" data-instgrm-permalink="{html.escape(url, quote=True)}" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:10px;margin:0;max-width:540px;min-width:326px;padding:0;width:99.375%"></blockquote><script async src="https://www.instagram.com/embed.js"></script>''', height=520, scrolling=True)
+    elif recipe["plataforma"] == "Facebook":
+        components.html(f'<iframe src="https://www.facebook.com/plugins/video.php?href={quote(url, safe="")}&show_text=false" width="100%" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>', height=430)
+    elif "youtube.com" in url or "youtu.be" in url:
+        video = url.split("youtu.be/")[-1].split("?")[0] if "youtu.be/" in url else url.split("v=")[-1].split("&")[0]
+        components.html(f'<iframe width="100%" height="315" src="https://www.youtube.com/embed/{html.escape(video)}" frameborder="0" allowfullscreen></iframe>', height=325)
+
+
+def inject_style():
+    st.markdown("""<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap');
+    :root { --ink:#2B2620;--ink-soft:#5C5346;--page:#EEE6D6;--paper:#FBF7EE;--paper2:#F4EDDC;--clay:#B5541B;--clay-deep:#8F3F13;--olive:#5B6B4F;--olive-soft:#DCE3D3;--line:rgba(43,38,32,.14); }
+    .stApp {background:var(--page);color:var(--ink);font-family:Inter,sans-serif}.block-container{max-width:920px;padding-top:1.7rem;padding-bottom:4rem}h1,h2,h3{font-family:Fraunces,serif!important;color:var(--clay-deep)!important}h1{font-weight:600!important;letter-spacing:-.02em}
+    div[data-testid="stExpander"]{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}div[data-testid="stExpander"] details summary{padding:.75rem .9rem;font-family:Fraunces,serif;font-size:1.1rem}div[data-testid="stExpander"] details[open] summary{border-bottom:1px solid var(--line)}
+    [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
+    .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:1px solid var(--line);border-radius:999px;color:var(--ink-soft)}.stPills [aria-pressed="true"]{background:var(--clay)!important;color:white!important;border-color:var(--clay)!important}
+    .recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
+    </style>""", unsafe_allow_html=True)
+
+
+def recipe_form(store, recipe, key, new=False):
+    with st.form(key, clear_on_submit=new):
+        name = st.text_input("Nombre de la receta *", recipe.get("nombre", ""))
+        ingredients = st.text_area("Ingredientes", recipe.get("ingredientes", ""), height=130, placeholder="Añade o corrige los ingredientes…")
+        c1, c2 = st.columns(2)
+        with c1: made = st.checkbox("Ya la hemos hecho", bool(recipe.get("hecha", False)))
+        with c2: is_fit = st.checkbox("FIT", bool(recipe.get("fit", False)))
+        source_url = st.text_input("Enlace original", recipe.get("enlace", ""), placeholder="https://…")
+        photo = st.text_input("Enlace de foto (opcional)", recipe.get("foto", ""), placeholder="https://…")
+        notes = st.text_area("Vuestras notas", recipe.get("notas", ""), height=80, placeholder="Cambios que hicisteis, si merece la pena repetirla…")
+        st.caption("Detalles de origen")
+        category = st.text_input("Categoría", recipe.get("categoria", "")); author = st.text_input("Quién la añade", recipe.get("quien", "")); platform = st.text_input("Plataforma", recipe.get("plataforma", "Manual")); source_date = st.text_input("Fecha", recipe.get("fecha", "")); status = st.text_input("Estado", recipe.get("estado", "")); tags = st.text_input("Ingredientes principales / etiquetas", recipe.get("ingredientes_principales", ""))
+        submitted = st.form_submit_button("Guardar receta", type="primary")
+    if submitted:
+        if not name.strip(): st.error("Ponle un nombre a la receta."); return
+        store.upsert(normalize({"id":recipe.get("id",str(uuid.uuid4())),"nombre":name.strip(),"ingCompletos":ingredients,"hecha":made,"fit":is_fit,"enlace":source_url.strip(),"foto":photo.strip(),"notas":notes,"categoria":category.strip(),"quien":author.strip(),"plataforma":platform.strip(),"fecha":source_date.strip(),"estado":status.strip(),"ingPrincipales":tags.strip()})); st.rerun()
+
+
+def render_recipe(store, recipe):
+    category = html.escape(recipe["categoria"] or "Sin categoría")
+    state = "Receta completa" if recipe["ingredientes"] else (recipe["estado"] or "Pendiente")
+    dot_class = "made" if recipe["hecha"] else ("" if recipe["ingredientes"] else "pending")
+    fit = " · FIT" if recipe["fit"] else ""
+    with st.expander(f"{recipe['nombre'] or '(sin nombre)'}{fit}"):
+        st.markdown(f'''<div class="recipe-meta"><span class="cat{' empty' if not recipe['categoria'] else ''}">{category}</span><span class="stamp"><b>{platform_label(recipe['plataforma'])}</b><br>{html.escape(recipe['fecha'])}<br>{html.escape(recipe['quien'])}</span></div>''', unsafe_allow_html=True)
+        if recipe["foto"]: st.image(recipe["foto"], use_container_width=True)
+        preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or recipe["estado"] or "Sin ingredientes registrados todavía"
+        st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div><p class="status {dot_class}">● {html.escape(state)}</p>', unsafe_allow_html=True)
+        if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
+        if recipe["enlace"]: st.link_button("Ver receta original →", recipe["enlace"]); source_preview(recipe)
+        st.divider(); recipe_form(store, recipe, f"edit_{recipe['id']}")
+        if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
 
 
 st.set_page_config(page_title="El recetario", page_icon="🍳", layout="wide")
-require_password()
+inject_style()
 store, storage_name = get_store()
-
 try:
-    imported = seed(store)
+    imported = seed(store); recipes = [normalize(row) for row in store.all()]
 except Exception as exc:
-    st.error("No se pudo conectar a la base de datos. Confirma que ejecutaste schema.sql en Supabase y revisa los secretos.")
-    st.exception(exc)
-    st.stop()
+    st.error("No se pudo conectar a la base de datos. Ejecuta schema.sql en Supabase y revisa los secretos."); st.exception(exc); st.stop()
 
-st.title("🍳 El recetario")
-st.caption(f"{storage_name}. Los cambios se guardan al pulsar «Guardar receta».")
-if imported:
-    st.success("Se han importado las recetas iniciales.")
-
-with st.sidebar:
-    st.header("Filtrar")
-    query = st.text_input("Buscar", placeholder="Nombre o ingrediente")
-    only_fit = st.checkbox("Solo FIT")
-    only_done = st.checkbox("Solo hechas")
-    st.divider()
-    if st.button("Recargar datos"):
-        st.rerun()
-
-try:
-    recipes = [normalize(recipe) for recipe in store.all()]
-except Exception as exc:
-    st.error("No se pudieron cargar las recetas.")
-    st.exception(exc)
-    st.stop()
-
-categories = sorted({recipe["categoria"] for recipe in recipes if recipe["categoria"]})
-category = st.selectbox("Categoría", ["Todas"] + categories)
-
+st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
+st.caption(f"{len(recipes)} recetas · {storage_name}")
+if imported: st.success("Recetas iniciales importadas.")
+if st.button("↻ Actualizar cambios", key="refresh"):
+    st.rerun()
+search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed")
+categories = sorted({r["categoria"] for r in recipes if r["categoria"]})
+selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed")
+query = search.lower().strip()
 def matches(recipe):
-    text = " ".join(str(recipe.get(field, "")) for field in ("nombre", "ingredientes", "ingredientes_principales", "notas")).lower()
-    return ((not query or query.lower() in text)
-            and (category == "Todas" or recipe["categoria"] == category)
-            and (not only_fit or recipe["fit"])
-            and (not only_done or recipe["hecha"]))
-
-visible = [recipe for recipe in recipes if matches(recipe)]
-st.subheader(f"{len(visible)} de {len(recipes)} recetas")
-
-with st.expander("＋ Añadir receta", expanded=False):
-    recipe_form(store, {"id": str(uuid.uuid4()), "fecha": date.today().strftime("%-d/%-m/%y"), "plataforma": "Manual", "estado": "Añadida a mano"}, "new_recipe", True)
-
-for recipe in visible:
-    icon = "✅" if recipe["hecha"] else ("🥗" if recipe["fit"] else "🍽️")
-    label = f"{icon} {recipe['nombre']}" + (f" · {recipe['categoria']}" if recipe["categoria"] else "")
-    with st.expander(label):
-        if recipe["foto"]:
-            st.image(recipe["foto"], width=360)
-        if recipe["notas_origen"]:
-            st.caption(f"Nota original: {recipe['notas_origen']}")
-        recipe_form(store, recipe, f"edit_{recipe['id']}")
-        if st.button("Eliminar receta", key=f"delete_{recipe['id']}"):
-            store.delete(recipe["id"])
-            st.rerun()
+    haystack = " ".join(str(recipe.get(field, "")) for field in ("nombre", "ingredientes", "ingredientes_principales", "notas")).lower()
+    return (not query or query in haystack) and (selected != "FIT" or recipe["fit"]) and (selected in ("Todas", "FIT") or recipe["categoria"] == selected)
+visible = [r for r in recipes if matches(r)]
+st.caption(f"{len(visible)} de {len(recipes)} recetas")
+with st.expander("＋ Nueva receta"):
+    recipe_form(store, {"id":str(uuid.uuid4()),"fecha":date.today().strftime("%-d/%-m/%y"),"plataforma":"Manual","estado":"Añadida a mano"}, "new_recipe", True)
+for start in range(0, len(visible), 2):
+    left, right = st.columns(2)
+    with left: render_recipe(store, visible[start])
+    if start + 1 < len(visible):
+        with right: render_recipe(store, visible[start + 1])
