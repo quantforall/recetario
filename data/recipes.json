@@ -2,12 +2,13 @@
   {
     "id": 0,
     "fecha": "10/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Canelones de calabacín rellenos de bonito",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "",
     "ingCompletos": "bonito del norte en aceite (o atún), aceitunas rellenas de anchoa picadas, nueces picadas, queso ricotta o requesón o queso crema, especias al gusto, salsa de tomate, queso emmental o mozzarella, calabacín",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0ABeN7oAdR/?igsh=bjE4M3NtZm9qb3R5",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -15,12 +16,13 @@
   {
     "id": 1,
     "fecha": "10/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "MuHammara",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/CyDir6oo-GE/?igsh=d2lrZzBsYTUyb205",
     "estado": "Completar ingredientes"
@@ -28,12 +30,13 @@
   {
     "id": 2,
     "fecha": "10/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pancakes",
     "categoria": "Postre",
     "ingPrincipales": "harina",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0C7s5vONT9/?igsh=MWppcndqcWxtMzNtaw==",
     "estado": "Completar ingredientes"
@@ -41,12 +44,13 @@
   {
     "id": 3,
     "fecha": "16/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Chips",
     "categoria": "Aperitivo",
     "ingPrincipales": "patata",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "Aperitivos patatas",
     "enlace": "https://www.instagram.com/reel/C2KRrZXov9i/?igsh=MThiZmVweDE2OXgwbQ==",
     "estado": "Completar ingredientes"
@@ -54,12 +58,13 @@
   {
     "id": 4,
     "fecha": "16/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Tomates y garbanzos horno",
     "categoria": "Verduras",
     "ingPrincipales": "garbanzos, tomate",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0KOnkMKMb6/?igsh=MXkycDBiMjY4cWtoNg==",
     "estado": "Completar ingredientes"
@@ -67,12 +72,13 @@
   {
     "id": 5,
     "fecha": "16/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Super ensalada templada",
     "categoria": "Ensalada",
     "ingPrincipales": "lechuga",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0KN32bLEUj/?igsh=MW9iazI2cXZzMmkwNg==",
     "estado": "Completar ingredientes"
@@ -80,12 +86,13 @@
   {
     "id": 6,
     "fecha": "16/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pastel dulce",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0znhmygfVz/?igsh=bzd5YWFycm1ndzNk",
     "estado": "Completar ingredientes"
@@ -93,12 +100,13 @@
   {
     "id": 7,
     "fecha": "18/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ceviche Mango y gambas",
     "categoria": "Ensalada",
     "ingPrincipales": "gambas, mango",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "Recetas alcachofas jamón y huevo",
     "enlace": "https://www.instagram.com/reel/C2Cp4M2uxGY/?igsh=YWN5Yzk5ZjNkOWQ5",
     "estado": "Completar ingredientes"
@@ -106,12 +114,13 @@
   {
     "id": 8,
     "fecha": "20/1/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Tortilla de boniato y espinacas (airfryer)",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "4 huevos, 200 g boniato rallado, 1/2 puerro, 100 g espinacas cortadas, sal y pimienta, 1 yogur de soja, mini mozzarellas opcional, aceite de oliva virgen extra",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0eu5pVt8pV/?igsh=MXA3dXU5dGNxemZsaQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -119,12 +128,13 @@
   {
     "id": 9,
     "fecha": "20/1/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Cherrys confitados con burrata y caballa",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "",
     "ingCompletos": "400 g tomates cherry, 1 lata de caballa del Sur, 1 burrata, 4 dientes de ajo, 1 cda miel, 1 cda albahaca seca, albahaca fresca, aceite de oliva virgen extra, pimienta y sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C1_7c3VI8os/?igsh=NWdiM2trYW85c3lq",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -132,12 +142,13 @@
   {
     "id": 10,
     "fecha": "20/1/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Calabaza hasselback con aromáticas, ajo y limón",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "1 calabaza, aceite de oliva virgen extra, sal, 2 ajos, perejil, albahaca, hierbabuena, mantequilla, feta, ricotta, yogur griego, limón",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/Cy3wEaPIGzk/?igsh=NDhhanZ4cm91Z3Q0",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -145,12 +156,13 @@
   {
     "id": 11,
     "fecha": "20/1/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Doritos Bits caseros de lentejas",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "pasta de lentejas cocida, queso parmesano en polvo, ajo en polvo, cebolla en polvo, pimentón picante o dulce, aceite de oliva virgen extra, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C01gbXiowEh/?igsh=MWpveHNmOG1mY3JjOA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -158,12 +170,13 @@
   {
     "id": 12,
     "fecha": "20/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmon",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C2Az5DMxR0V/?igsh=MWc2MHdzZ3RpZXlucA==",
     "estado": "Completar ingredientes"
@@ -171,12 +184,13 @@
   {
     "id": 13,
     "fecha": "20/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "SALMON ADEREZO",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/p/C2EaMOKPYa4/?igsh=eHlvYnM5N3Zyc3Y1",
     "estado": "Completar ingredientes"
@@ -184,12 +198,13 @@
   {
     "id": 14,
     "fecha": "24/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pastel calabacín con o sin queso",
     "categoria": "Verduras",
     "ingPrincipales": "calabacín, queso",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C14RKiuIgp4/?igsh=MXM2dmhsbnFjZGsyMw==",
     "estado": "Completar ingredientes"
@@ -197,12 +212,13 @@
   {
     "id": 15,
     "fecha": "25/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Puré de coliflor con alcachofas",
     "categoria": "Verduras",
     "ingPrincipales": "coliflor",
     "ingCompletos": "1/2 coliflor hervida, 30g mantequilla, nuez moscada, pimienta blanca, sal, chorrito de leche o bebida vegetal; 5 alcachofas en conserva, 20g mantequilla; tomate seco, aceite con pimentón, nueces, cilantro",
+    "foto": "",
     "notasChat": "Coliflor y alcachofas",
     "enlace": "https://www.instagram.com/reel/C17VxwTixy2/?igsh=MXA0dHV3dXhwY2s4Yw==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -210,12 +226,13 @@
   {
     "id": 16,
     "fecha": "27/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Berenjena con mantequilla de miel y tomillo, crujiente de pistacho",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "1 berenjena grande, aceite de oliva, sal, pimienta, 2 cdas mantequilla salada, 1/2 cda miel, tomillo fresco, pimentón; 1 lata de garbanzos, aceite de oliva, ajo, orégano; granada, pistachos, rúcula, ralladura de limón, tahini opcional",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0SLoOnRe_n/?igsh=MThlamh4MmZ0djFxbQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -223,12 +240,13 @@
   {
     "id": 17,
     "fecha": "31/1/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Puerros al horno con crema de cacahuete",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "2 puerros, aceite, sal y pimienta, orégano y tomillo, 3 cdas yogur griego, zumo de limón, 20 g mantequilla, cayena, jamón ibérico, 2 cdas crema de cacahuete, cacahuetes",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C2r8_SnseGR/?igsh=MWk0dzFjbm5kdm4xag==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -236,12 +254,13 @@
   {
     "id": 18,
     "fecha": "5/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmón a la naranja (airfryer u horno)",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "1 lomo de salmón fresco, 1 naranja, 1 cda mostaza en grano, 1 cda salsa de soja sin gluten, chorrito de zumo de naranja, pimienta",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C27MHeXtWQp/?igsh=Yjg1NGVjM3E2Mm0x",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -249,12 +268,13 @@
   {
     "id": 19,
     "fecha": "5/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmón al horno con naranja y romero",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "4 filetes de salmón, zumo de media naranja, 2 cdas salsa de soja, 1 cdta miel, chile en copos, romero, gajos de naranja; salsa: mantequilla, romero, pulpa de naranja, azúcar, chile, maicena",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C0qpK6oAk5j/?igsh=MWY5eThpZW92cDlrYQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -262,12 +282,13 @@
   {
     "id": 20,
     "fecha": "5/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Sándwich mixto de brócoli",
     "categoria": "Verduras",
     "ingPrincipales": "brócoli, harina, queso",
     "ingCompletos": "120 g de brócoli rallado, 80 g queso mozzarella rallado, 1 huevo grande, jamón y queso para el relleno",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C20LxCSC_2l/?igsh=MWZtcHNlMHBqNXpyMw==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -275,12 +296,13 @@
   {
     "id": 21,
     "fecha": "5/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmón crujiente al sésamo",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "450 g salmón en cubos, ajo en polvo, jengibre molido, sal y pimienta; salsa: coconut aminos o tamari, miel o sirope, aceite de sésamo tostado, sriracha, vinagre de arroz",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C1sH333PRBO/?igsh=b2VhcTdvNWVvbDJi",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -288,12 +310,13 @@
   {
     "id": 22,
     "fecha": "5/2/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Curry de garbanzos y verduras con yogur",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "400 g garbanzos cocidos, 1 cebolla, 1 calabacín, 350 g salsa de tomate casera, 2 cdas curry, aceite de oliva virgen extra, sal y pimienta; salsa de yogur: 2 yogures griegos, zumo y ralladura de lima, sal y pimienta",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/Czo5mu0MML8/?igsh=dWhoY29sc3k2dnpw",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -301,12 +324,13 @@
   {
     "id": 23,
     "fecha": "5/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Brownie-cheesecake sin harina ni azúcar",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "3 plátanos maduros, 90 g crema de cacahuete, 55 g cacao puro en polvo, 100 g queso crema light, 30 g eritritol, extracto de vainilla, 30 g pepitas de chocolate negro",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C27Ouo7thtR/?igsh=MnE0dXR4a2hjdnUw",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -314,12 +338,13 @@
   {
     "id": 24,
     "fecha": "7/2/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/reel/1879429829140818?s=chYV2B&fs=e",
     "estado": "Sin ingredientes en el texto (solo hashtags)"
@@ -327,12 +352,13 @@
   {
     "id": 25,
     "fecha": "7/2/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/reel/982931179920902?s=chYV2B&fs=e",
     "estado": "Sin texto legible en la publicación"
@@ -340,12 +366,13 @@
   {
     "id": 26,
     "fecha": "19/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Postre ligero de manzana al microondas",
     "categoria": "Postre",
     "ingPrincipales": "huevo, manzana",
     "ingCompletos": "2 manzanas picadas, 2 huevos, 2 cdas yogur griego sin azúcar, stevia opcional",
+    "foto": "",
     "notasChat": "Ese tiene buena pinta",
     "enlace": "https://www.instagram.com/reel/C19cmI7ugkd/?igsh=MmxsNjRtNTdhbWYy",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -353,12 +380,13 @@
   {
     "id": 27,
     "fecha": "19/2/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/apEv6xR3SHNFau1i/",
     "estado": "Enlace privado / no disponible fuera del chat"
@@ -366,12 +394,13 @@
   {
     "id": 28,
     "fecha": "21/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Tarta de zanahoria exprés (mug cake)",
     "categoria": "Postre",
     "ingPrincipales": "zanahoria",
     "ingCompletos": "1/2 plátano, 3-4 cdas harina de avena, levadura química, canela, 1/2 zanahoria rallada, 1/2 taza bebida vegetal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3A9KJco-n2/?igsh=eWVwMXE2a2t5ZHZ6",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -379,12 +408,13 @@
   {
     "id": 29,
     "fecha": "24/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de pasta con burrata",
     "categoria": "Ensalada",
     "ingPrincipales": "",
     "ingCompletos": "pasta a elegir, 1 burrata, 1 lata de maíz cocido, 2 latas de atún, nueces, albahaca o rúcula; aliño: aceite de oliva virgen extra, miel, mostaza, vinagre, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3DjiqaIzHb/?igsh=MW4zMHk3b2xkOGxwNA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -392,12 +422,13 @@
   {
     "id": 30,
     "fecha": "28/2/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/k1JjV8Y49nWv9fci/",
     "estado": "Enlace privado / no disponible fuera del chat"
@@ -405,12 +436,13 @@
   {
     "id": 31,
     "fecha": "7/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Cebiche peruano (leche de tigre)",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "",
     "ingCompletos": "leche de tigre: apio, 1/4 cebolla morada, jengibre, 250 ml caldo de pescado; pescado: corvina/mero/lubina, ají limo rojo, cilantro, 1/2 cebolla morada, zumo de 8 limas; acompañar: lechuga, boniato",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C33GMZfP4-J/?igsh=MW1vNjFzYWQzd2F0dA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -418,12 +450,13 @@
   {
     "id": 32,
     "fecha": "10/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmón con pistacho al horno",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "filete de salmón, pistachos, mostaza de Dijon, miel, ajo en polvo, sal y pimienta",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C2sbATDqUYb/?igsh=MWU2ZDJpOW1jZ3M3Nw==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -431,12 +464,13 @@
   {
     "id": 33,
     "fecha": "10/3/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Muhammara (paté de pimientos y nueces)",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "300 g pimientos asados, 80 g nueces, 2 dientes de ajo, miel/sirope/pasta de dátil, zumo de limón, aceite de oliva virgen extra, sal y pimienta negra, comino, pimentón dulce, pimentón picante opcional",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C4QL8R8to7b/?igsh=MXJmYW1zaGd5MW9rYQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -444,12 +478,13 @@
   {
     "id": 34,
     "fecha": "12/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Puerros con salsa de yogur y cacahuete",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "puerros, mantequilla, yogur griego natural, crema de cacahuete, piñones o almendras o avellanas tostadas, queso parmesano, cebollino fresco",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3YU28VoegK/?igsh=c2VyenBudmxsb3k2",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -457,12 +492,13 @@
   {
     "id": 35,
     "fecha": "12/3/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C29-b3Bu8xn/?igsh=bnhjN2F2NWk0aWd0",
     "estado": "Sin título — pendiente de abrir"
@@ -470,12 +506,13 @@
   {
     "id": 36,
     "fecha": "13/3/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Filete empanado sin freír (airfryer)",
     "categoria": "Carne y aves",
     "ingPrincipales": "",
     "ingCompletos": "pollo, huevo, puré de patata natural en polvo, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C4X0aelITfg/?igsh=a2w4ZnZpdTF3Z2Vn",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -483,12 +520,13 @@
   {
     "id": 37,
     "fecha": "13/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Carbonara de pistacho",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "frutos secos, harina",
     "ingCompletos": "6-7 yemas de huevo, queso pecorino, pasta de pistacho, pimienta, 500 g pasta, guanciale",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C4F2fLAil3i/?igsh=NDI0czlybnBsczJ3",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -496,12 +534,13 @@
   {
     "id": 38,
     "fecha": "14/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Canastillas de plátano macho con ceviche de gambones",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "lechuga, marisco",
     "ingCompletos": "2 plátanos macho, sal, pimienta, AOVE; ceviche: 250 g gambones cocidos, 1 tomate, 2 chalotas, 1/2 pimiento italiano, cilantro, zumo de 1/2 limón, 1/2 aguacate",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C4dAxVoNWaq/?igsh=c3hlMjJxaHV6Mnhm",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -509,12 +548,13 @@
   {
     "id": 39,
     "fecha": "14/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de calabacín con burrata y almendra",
     "categoria": "Ensalada",
     "ingPrincipales": "lechuga, verduras",
     "ingCompletos": "2-3 calabacines, 2 bolitas de burrata, almendra tostada picada, albahaca y menta fresca, parmesano o ricotta opcional, pan tostado opcional",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C4UUtvguqEx/?igsh=a3ZxMTZuM201cXZ0",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -522,12 +562,13 @@
   {
     "id": 40,
     "fecha": "22/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de rúcula, pera y queso azul",
     "categoria": "Ensalada",
     "ingPrincipales": "lechuga",
     "ingCompletos": "rúcula, pera madura salteada en mantequilla, jamón (prosciutto), queso azul, almendra laminada, arándanos secos; vinagreta: aceite de oliva, miel, zumo de limón, mostaza de Dijon",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C1pHvRXLcC5/?igsh=ZmpkaWsxaDd3Mzhs",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -535,12 +576,13 @@
   {
     "id": 41,
     "fecha": "25/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3irxrCR9aa/?igsh=dnhwc3JpcWNyZnQ=",
     "estado": "Sin título — pendiente de abrir"
@@ -548,12 +590,13 @@
   {
     "id": 42,
     "fecha": "27/3/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/G3VeBK3vo9bzjzxh/",
     "estado": "Enlace privado / no disponible fuera del chat"
@@ -561,12 +604,13 @@
   {
     "id": 43,
     "fecha": "27/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3A9BJPuVEs/?igsh=cXc5eWxxMmJkeHE5",
     "estado": "Sin título — pendiente de abrir"
@@ -574,12 +618,13 @@
   {
     "id": 44,
     "fecha": "28/3/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pere in sfoglia (peras en hojaldre italianas)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "3 peras, 1 lámina de hojaldre redonda, 100 g gorgonzola, 50 g miel, 20 g nueces, 1 yema de huevo para pincelar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/p/C47_Ab0s-DJ/?igsh=bnBvdjdwNnR4Njds",
     "estado": "Completa (recuperada de Instagram/Facebook) — nota: publicación con varias recetas, solo se recogió una"
@@ -587,12 +632,13 @@
   {
     "id": 45,
     "fecha": "1/4/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/xh9LnXGMGh8Lfiov/",
     "estado": "Enlace privado / no disponible fuera del chat"
@@ -600,12 +646,13 @@
   {
     "id": 47,
     "fecha": "8/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Idea de cena: tortilla de patata rápida con queso",
     "categoria": "Verduras",
     "ingPrincipales": "harina, huevo, patata",
     "ingCompletos": "1 patata grande, 2 huevos, 2 tomates, 2 tazas de rúcula, 1 taza de queso rallado (opcional)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C5dTatCtEGU/?igsh=MWY5NmYyaGN5NzdyMg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -613,12 +660,13 @@
   {
     "id": 48,
     "fecha": "26/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C58wgRVLl6l/?igsh=MWc2a2UyamVkM2ppdA==",
     "estado": "Sin título — pendiente de abrir"
@@ -626,12 +674,13 @@
   {
     "id": 49,
     "fecha": "28/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Untable mediterráneo de ricotta, aceitunas y tomate seco",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "albahaca, aceitunas verdes, anchoas, tomate seco en aceite, pistachos, sal, pimienta negra, aceite de oliva virgen extra; 100 g queso ricotta, 100 g yogur griego, ralladura de limón; pan integral tostado",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C5wDlA8I5OX/?igsh=d21rMmVrdjUxNHdh",
     "estado": "Completa (recuperada de Instagram/Facebook) — nota: publicación con varias recetas, solo se recogió una"
@@ -639,12 +688,13 @@
   {
     "id": 50,
     "fecha": "28/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Bizcochito sin azúcar (individual)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "1 plátano maduro pequeño (o 1/2 grande), 1 huevo M, 25 g copos de avena, 1/2 cdta bicarbonato o levadura, 1 cda leche o bebida vegetal, trocitos de chocolate 85%",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6UFIxTtM26/?igsh=M2xjM3lqN2xqcXpq",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -652,12 +702,13 @@
   {
     "id": 51,
     "fecha": "30/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Rollitos crujientes de langostinos en papel de arroz",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "",
     "ingCompletos": "200 g langostinos pelados cocidos, 1 diente de ajo, jengibre, cebollino, 1 cdta almidón de maíz, 1 cda salsa de soja, 1 cda aceite de sésamo, sal, 7 láminas de papel de arroz",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C53vB_6tEsj/?igsh=dWZmYnhqN2szb3o0",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -665,12 +716,13 @@
   {
     "id": 52,
     "fecha": "30/4/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Espárragos verdes al horno con parmesano",
     "categoria": "Verduras",
     "ingPrincipales": "verduras",
     "ingCompletos": "1 manojo de espárragos verdes, 70 g parmesano rallado, 200 g tomates cherry, 2 dientes de ajo, aceite de oliva, albahaca fresca",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C5F1CUAopT3/?igsh=OHI5NzlrZnpwZGQ1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -678,12 +730,13 @@
   {
     "id": 53,
     "fecha": "11/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pera caramelizada con burrata y jamón",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "1 pera conference, 100 g paleta de jamón (2 sobres), 3 burratas, 2 cdas azúcar moreno, 10 g mantequilla, 20 g pistachos, rúcula, sal y pimienta, crema balsámica opcional",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6lLU2PClb8/?igsh=d3E1bDh3M2Z3eXNs",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -691,12 +744,13 @@
   {
     "id": 54,
     "fecha": "11/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pollo con piña",
     "categoria": "Carne y aves",
     "ingPrincipales": "piña, pollo",
     "ingCompletos": "6 contramuslos de pollo sin hueso, 4 rodajas de piña en su jugo, 1/2 vaso de jugo de piña, 1/2 vaso de salsa de soja, 3 cdas de miel, 2 ajos, 1/2 cdta jengibre en polvo, 1 cdta maicena, almendras tostadas",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C3_DhGaox5A/?igsh=MWg2cjVvc2NlNDd2aQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -704,12 +758,13 @@
   {
     "id": 55,
     "fecha": "13/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Tartaletas saladas de pera y gorgonzola",
     "categoria": "Aperitivo",
     "ingPrincipales": "pera, queso",
     "ingCompletos": "2 peras Williams, 200 g gorgonzola, 1 puerro, 1 lámina de hojaldre, 2 cdas de miel de acacia, 50 g nueces",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C5Vrtw9oHbg/?igsh=MTdtY294bno5cmw0ZA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -717,12 +772,13 @@
   {
     "id": 56,
     "fecha": "15/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada fresca de mango, aguacate y langostinos",
     "categoria": "Ensalada",
     "ingPrincipales": "aguacate, lechuga, mango, marisco",
     "ingCompletos": "mango, aguacate, langostinos, cebolla morada; aliño: ralladura de naranja y limón, jengibre rallado, zumo de naranja y limón, aceite de oliva, vinagre de Jerez, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6bOVOoO9Ov/?igsh=YW14djdjZTUyMGZl",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -730,12 +786,13 @@
   {
     "id": 57,
     "fecha": "20/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Nocilla duo casera (dos texturas)",
     "categoria": "Postre",
     "ingPrincipales": "chocolate",
     "ingCompletos": "crema choco: 130 g avellanas peladas, 10 g cacao puro en polvo, 1 cdta stevia; crema leche: 130 g avellanas peladas, 20 g leche en polvo desnatada",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C5DrTeGNOV6/?igsh=dXg0enV5YncwZmc5",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -743,12 +800,13 @@
   {
     "id": 58,
     "fecha": "22/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de garbanzos y verduras al horno",
     "categoria": "Ensalada",
     "ingPrincipales": "",
     "ingCompletos": "garbanzos cocidos, brócoli, coliflor, aceite de oliva, ajo en polvo, comino, pimienta, pimentón dulce; queso crema, perejil, pimienta, zumo de limón, aceite de oliva virgen extra, sal, cebolla morada, tomates cherry",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6lEAVBK5pr/?igsh=NGMzZTNrbWVpZHd4",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -756,12 +814,13 @@
   {
     "id": 59,
     "fecha": "25/5/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de pasta y calabaza asada con yogur y limón",
     "categoria": "Ensalada",
     "ingPrincipales": "",
     "ingCompletos": "pasta, calabaza en dados, aliño de yogur y limón (cantidades no especificadas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C7KRPebNtWd/?igsh=dzk2cnV5ZXdoenRw",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -769,12 +828,13 @@
   {
     "id": 60,
     "fecha": "21/6/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ajoblanco de coco sin gluten",
     "categoria": "Crema o sopa",
     "ingPrincipales": "leche de coco",
     "ingCompletos": "150 g anacardos crudos, 150 g almendras crudas, 250 g leche de coco, 200 g agua, 10 g vinagre de manzana o jerez, 10 g aceite de oliva, 4 g sal, 1 diente de ajo pequeño",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C8Koj8bOknd/?igsh=MTY1YjN2bnEwdHV1ZA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -782,12 +842,13 @@
   {
     "id": 61,
     "fecha": "23/6/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(contenido marcado como sensible por Instagram — no se pudo leer)",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C8PS7HGx16c/?igsh=NzduZmF4dHF3dXZ0",
     "estado": "Bloqueado por Instagram (contenido sensible), pendiente de abrir manualmente"
@@ -795,12 +856,13 @@
   {
     "id": 62,
     "fecha": "7/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Base de pizza de zanahoria",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "zanahoria (base rallada/cocida), huevo, queso rallado, especias al gusto (receta exacta en el perfil de la autora)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9HfmGvNjsN/?igsh=MXIwcGxwYjdqdXNveA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -808,12 +870,13 @@
   {
     "id": 63,
     "fecha": "15/7/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/Pah28GergzcCduv4/",
     "estado": "Sin título — pendiente de abrir"
@@ -821,12 +884,13 @@
   {
     "id": 64,
     "fecha": "20/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/p/C85RAaquLFy/?igsh=MTFuMjVucTAwc3V6Ng==",
     "estado": "Sin título — pendiente de abrir"
@@ -834,12 +898,13 @@
   {
     "id": 65,
     "fecha": "21/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema fría de mango y zanahoria",
     "categoria": "Crema o sopa",
     "ingPrincipales": "mango, zanahoria",
     "ingCompletos": "3 zanahorias grandes, 1 mango maduro, pimienta negra, jengibre, cúrcuma, 1 cda queso mascarpone, aceite de oliva virgen extra, jamón ibérico para acompañar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9AqxkwIpRa/?igsh=MTJpcmlxbG8zMDRkMg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -847,12 +912,13 @@
   {
     "id": 66,
     "fecha": "23/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de sandía, feta, pistacho y menta",
     "categoria": "Ensalada",
     "ingPrincipales": "frutos secos, lechuga, queso, sandía",
     "ingCompletos": "3-4 tazas de sandía picada, 1 taza de arúgula o pepino persa, queso feta, pistacho picado, hojas de menta, ralladura de limón amarillo, sumac (opcional), sal Maldon, pimienta; vinagreta: menta picada, zumo y ralladura de limón, miel o zumo de naranja",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9HY_M8t2z6/?igsh=MWo4ZDA0cnZuMGRkMw==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -860,12 +926,13 @@
   {
     "id": 67,
     "fecha": "23/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de espárragos crudos con parmesano y nuez",
     "categoria": "Ensalada",
     "ingPrincipales": "espárragos, frutos secos, lechuga, queso",
     "ingCompletos": "1 manojo de espárragos crudos o cocidos, 1/2 taza parmesano reggiano rallado, 1/2 taza nuez tostada picada, ralladura de limón, 1 rebanada de pan tostado para migas; vinagreta de limón",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6xR-CxNJGS/?igsh=YWdnOWN2aWM1NmNo",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -873,12 +940,13 @@
   {
     "id": 68,
     "fecha": "23/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Tosta de higos, burrata y jamón",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "media barra de pan, jamón o paleta ibérica, 3-4 higos, 1 burrata, avellanas, miel, aceite de oliva virgen extra",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C844hbNI9eu/?igsh=Njl4eHJnaTc2bmht",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -886,12 +954,13 @@
   {
     "id": 69,
     "fecha": "24/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Wrap proteico de queso cottage al horno",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "200 g queso cottage, orégano, relleno al gusto (fiambre de pavo, tomate, brotes)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C7SB5uUMXyl/?igsh=OHBsM2JnY3Q3dnA3",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -899,12 +968,13 @@
   {
     "id": 70,
     "fecha": "24/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Postre de manzana sin harina",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "340 g manzanas troceadas, 3 huevos M, 3 cdas yogur griego sin azúcar, edulcorante opcional, aroma de vainilla, canela",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9C243tNpN4/?igsh=MzdhczdtdXU1dDE2",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -912,12 +982,13 @@
   {
     "id": 71,
     "fecha": "24/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Hummus de mango y curry",
     "categoria": "Aperitivo",
     "ingPrincipales": "mango",
     "ingCompletos": "300 g garbanzos cocidos, 1 mango, 15 g tahini, zumo de lima, 2 cdas curry, sal, aceite de oliva virgen extra, granada, semillas de sésamo",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C84LVRRCyAs/?igsh=eTU2ZjQ4enk4NG1w",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -925,12 +996,13 @@
   {
     "id": 72,
     "fecha": "27/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Gambones al chimichurri",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "gambas",
     "ingCompletos": "450 g gambones/langostinos, 1/4 taza aceite de oliva, 2 dientes de ajo, sal, pimentón, chipotle en polvo, pimienta negra, ralladura de limón; chimichurri: perejil, cilantro, chile fresco (opcional), aceite de oliva, ajo, vinagre de vino tinto, miel, lima, sal, orégano",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C6zv1WurX-e/?igsh=dXBud3JrZW44Y3Vl",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -938,12 +1010,13 @@
   {
     "id": 73,
     "fecha": "27/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Mermelada de arándanos saludable (con chía)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "100 g arándanos, chorrito de agua, 20 g semillas de chía (remojadas 20 min)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9MkfMTtqw3/?igsh=aTYyeGU2ZXpyazFw",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -951,12 +1024,13 @@
   {
     "id": 74,
     "fecha": "27/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Sándwich de cebolla caramelizada con gouda y pera",
     "categoria": "Aperitivo",
     "ingPrincipales": "cebolla, pera, queso",
     "ingCompletos": "2 cebollas blancas grandes, 60 g mantequilla sin sal, aceite de oliva, sal, pimienta, 80 g queso gouda, 1 pera, 2 rebanadas de pan",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C7W_rL0xZa0/?igsh=NThiNXl4Ym90d3dx",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -964,12 +1038,13 @@
   {
     "id": 75,
     "fecha": "28/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada burrata con albaricoques y cherry al horno",
     "categoria": "Ensalada",
     "ingPrincipales": "canónigos, lechuga, melocotón, queso, tomate",
     "ingCompletos": "1 burrata, 3 albaricoques, 150 g tomates cherry, rúcula y canónigos; vinagreta: aceite de oliva, vinagre de manzana, mostaza de Dijon, mermelada de melocotón, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9c4873sIzU/?igsh=aXRzcnlxdW5taXE3",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -977,12 +1052,13 @@
   {
     "id": 76,
     "fecha": "30/7/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ensalada de higos, jamón serrano y queso azul",
     "categoria": "Ensalada",
     "ingPrincipales": "",
     "ingCompletos": "4 higos, 30 g jamón serrano, 50 g queso azul (roquefort), lechugas variadas (canónigos y rúcula), nueces picadas; vinagreta: 60 ml aceite de oliva virgen extra, 20 ml vinagre de Jerez, 1 cdta miel, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C-A9KzcsmGu/?igsh=MXNvcjFjNmN2aTN1MA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -990,12 +1066,13 @@
   {
     "id": 77,
     "fecha": "2/8/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Web",
     "nombre": "Chili crab (Singapur)",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "cangrejo, chile",
     "ingCompletos": "Buey de mar (o gambas, langostinos, bogavante, mejillones); para el rempah: chiles, ajo, jengibre; tomate; panecillos mantou al vapor para untar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://diegodoal.com/recetas/chili-crab",
     "estado": "Completa (web pública)"
@@ -1003,12 +1080,13 @@
   {
     "id": 78,
     "fecha": "6/8/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Batido de melón con yogur y hierbabuena",
     "categoria": "Postre",
     "ingPrincipales": "melón",
     "ingCompletos": "500 g melón, 1 yogur natural o 250 ml kéfir, hierbabuena al gusto, zumo de 1/2 lima",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C9IJJ3FIXHu/?igsh=MXAxcTNhYmg5dGZvdA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1016,12 +1094,13 @@
   {
     "id": 79,
     "fecha": "14/8/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Salmón con costra de miel y pistacho",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "frutos secos, salmón",
     "ingCompletos": "salmón, pistachos triturados, miel (receta completa solo en la web de la autora, enlace en su bio)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C-TjC7lS-Zi/?igsh=MWh3dzZ4enl5d2JoZQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1029,12 +1108,13 @@
   {
     "id": 80,
     "fecha": "28/8/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Calabacín y tomate seco con salsa de aguacate",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "calabacín, tomate seco en aceite de oliva, 1 aguacate, 2 cdas yogur natural o de coco, lima",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C-swKQaIzYl/?igsh=eWtvbnBjeHNvYWh1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1042,12 +1122,13 @@
   {
     "id": 81,
     "fecha": "1/9/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto)",
     "categoria": "Aperitivo",
     "ingPrincipales": "calabacín, jamón, queso",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C_VH4MaNKiO/?igsh=MW5uc296djk0Z3J0eg==",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1055,12 +1136,13 @@
   {
     "id": 82,
     "fecha": "4/9/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/8J6GDiFY6xvG6BQc/",
     "estado": "Sin título — pendiente de abrir"
@@ -1068,12 +1150,13 @@
   {
     "id": 83,
     "fecha": "6/9/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Berenjena al horno con tomate y mozzarella",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "1 berenjena, 2 puñados tomates cherry, aceite de oliva, sal, pimienta negra, 1 cdta vinagre balsámico, 1/2 cdta miel, 2 dientes de ajo pequeños, 100 g mozzarella, pecorino romano rallado",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C_NBqvoINYp/?igsh=NXp3cjZhcmg5MGhu",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1081,12 +1164,13 @@
   {
     "id": 84,
     "fecha": "7/9/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/pn7YBD4yJvyn4sg9/",
     "estado": "Sin título — pendiente de abrir"
@@ -1094,12 +1178,13 @@
   {
     "id": 85,
     "fecha": "8/9/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Fiambre de pavo casero al horno",
     "categoria": "Carne y aves",
     "ingPrincipales": "pavo",
     "ingCompletos": "pechugas de pavo o pollo, 1 cda pimentón de la Vera, 1 cdta cúrcuma, 1 cdta ajo en polvo, pimienta negra, sal, aceite de oliva virgen extra",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C_nUDK4ofwx/?igsh=MWlpYTE0bGx2cnJzZg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1107,12 +1192,13 @@
   {
     "id": 86,
     "fecha": "11/9/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Nachos de boniato al horno",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "boniato, mozzarella rallada, ricotta o crema, tomate cherry, jamón, guacamole o aguacate",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C_souMWNHwB/?igsh=NHRtbXV5dDJoOTA2",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1120,12 +1206,13 @@
   {
     "id": 87,
     "fecha": "6/10/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Tortilla rellena estilo pizza (idea de cena rápida)",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "1 tortilla integral, 2 huevos, 1 cda queso cottage (o crema/yogur/requesón batido), taquitos de jamón, pimiento verde, espinacas o rúcula, sal y pimienta, queso rallado",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DAyq6SwNjYH/?igsh=bHV3NG4wYTUycXpm",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1133,12 +1220,13 @@
   {
     "id": 88,
     "fecha": "20/10/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Sopas detox antiinflamatorias (varias recetas)",
     "categoria": "Crema o sopa",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DBMwgMISqxr/?igsh=Z3RkaWdjNTY4MnFz",
     "estado": "Ingredientes en el primer comentario — no accesible, pendiente de abrir manualmente"
@@ -1146,12 +1234,13 @@
   {
     "id": 89,
     "fecha": "30/10/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/EKj1vKPaU8LXjj12/",
     "estado": "Sin título — pendiente de abrir"
@@ -1159,12 +1248,13 @@
   {
     "id": 90,
     "fecha": "2/11/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/83rAdxgb2YcxuY9c/",
     "estado": "Sin título — pendiente de abrir"
@@ -1172,12 +1262,13 @@
   {
     "id": 91,
     "fecha": "4/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto — video de salchichas)",
     "categoria": "Carne y aves",
     "ingPrincipales": "pollo, zanahoria",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DBt0Q8hOAwT/?igsh=MW83aDViZWlvanMyOQ==",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1185,12 +1276,13 @@
   {
     "id": 92,
     "fecha": "6/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto — hojaldre navideño)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C_3EacYI4BG/?igsh=eDdzd3FwMTlrYXd0",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1198,12 +1290,13 @@
   {
     "id": 93,
     "fecha": "6/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto — hojaldre con Nutella)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C69bgtJIPwp/?igsh=MWVrdnc1ejR6Y3pwbQ==",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1211,12 +1304,13 @@
   {
     "id": 94,
     "fecha": "6/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Mini pancakes de plátano",
     "categoria": "Postre",
     "ingPrincipales": "harina, plátano",
     "ingCompletos": "2-3 plátanos, 2 huevos, 1 taza de leche, 1 1/3 taza de harina con levadura, 1 cdta de canela en polvo, 1 cdta aceite de oliva virgen extra, frutos rojos y sirope de arce para servir",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DBTiyceSzoa/?igsh=MWQ2dDRzdzBqMnl2eQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1224,12 +1318,13 @@
   {
     "id": 95,
     "fecha": "14/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pasta con champiñones y castañas",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "",
     "ingCompletos": "farfalle, mezcla de champiñones, castañas, tomillo, mantequilla, vino blanco (cantidades no especificadas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DCNAxYkuRs5/?igsh=aTc1d2pjYWhhODQ3",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1237,12 +1332,13 @@
   {
     "id": 96,
     "fecha": "17/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Fideuá de calamares en su tinta (airfryer)",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "harina",
     "ingCompletos": "400 g caldo de pescado, 200 g fideo nº2, 2 latas de calamares en su tinta, aceite de oliva, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DCZEFDnNEoU/?igsh=MXQyOGQxenhuZGpuOA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1250,12 +1346,13 @@
   {
     "id": 97,
     "fecha": "24/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto — pelotazos proteicos)",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DBrWkx0uoFa/?igsh=M3RlMWl3cWVrYnlt",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1263,12 +1360,13 @@
   {
     "id": 98,
     "fecha": "24/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Gorditas de leche condensada (sin ingredientes en el texto)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/C-5PZFcCz8O/?igsh=OHlrbnMwYXlvd3N3",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1276,12 +1374,13 @@
   {
     "id": 99,
     "fecha": "24/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema de gambas navideña",
     "categoria": "Crema o sopa",
     "ingPrincipales": "gambas",
     "ingCompletos": "500 g gambas (pueden ser congeladas), 6 cdas aceite de oliva virgen extra, 200 ml vino blanco, 1,5 l agua, 2 puerros, 3 zanahorias, 1 boniato",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DCwFOCntfaf/?igsh=aXRyOXNyeG1ycGth",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1289,12 +1388,13 @@
   {
     "id": 100,
     "fecha": "24/11/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Rollitos de pan perdido rellenos de chocolate",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "8 rebanadas de pan de molde sin corteza, 1 tarro de crema de chocolate y avellanas, 1 huevo, 3 cdas leche, 1 cda nata líquida opcional, mantequilla, vainilla líquida; glaseado: canela, 100 g azúcar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DBjZ3y7A9Fx/?igsh=cnJnMmUycGU2NWt5",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1302,12 +1402,13 @@
   {
     "id": 101,
     "fecha": "3/12/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Rollitos de brie con arándanos en hojaldre",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "1 lámina de hojaldre, 200 g brie, salsa de arándanos, nueces picadas, 1 yema de huevo con 1 cdta leche, miel para decorar, romero",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DC9taRRoy3x/?igsh=MTZmeXlpc2d2aXBjNw==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1315,12 +1416,13 @@
   {
     "id": 102,
     "fecha": "3/12/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Palomitas de coliflor rebozada",
     "categoria": "Aperitivo",
     "ingPrincipales": "coliflor",
     "ingCompletos": "1 coliflor, 2 huevos, 1 taza de copos de maíz triturados, pimentón, comino, ajo en polvo, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DC37zk3NqOc/?igsh=eGkxNHhzeWJqaGI1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1328,12 +1430,13 @@
   {
     "id": 103,
     "fecha": "6/12/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema de coliflor asada con puerro",
     "categoria": "Crema o sopa",
     "ingPrincipales": "coliflor",
     "ingCompletos": "1 coliflor, 2 puerros, 3 dientes de ajo, sal y pimienta, 5 cdas aceite de oliva virgen extra, 1 litro caldo de verduras o agua, nueces y cebollino para decorar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DDJ9Az3tOnA/?igsh=MWlqaHprb3E1cXF1bg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1341,12 +1444,13 @@
   {
     "id": 104,
     "fecha": "7/12/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema de coliflor y manzana asada",
     "categoria": "Crema o sopa",
     "ingPrincipales": "",
     "ingCompletos": "coliflor, manzana, caldo vegetal o de pollo, levadura nutricional, crema balsámica para decorar (cantidades no especificadas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DDFm0EPuNKS/?igsh=MWlvbDI5c2V1Nm92Yg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1354,12 +1458,13 @@
   {
     "id": 105,
     "fecha": "7/12/24",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/15Lahf2DRe/",
     "estado": "Sin título — pendiente de abrir"
@@ -1367,12 +1472,13 @@
   {
     "id": 106,
     "fecha": "8/12/24",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Paté de mejillones en escabeche",
     "categoria": "Aperitivo",
     "ingPrincipales": "mejillones",
     "ingCompletos": "1 lata de mejillones en escabeche, 1 lata de atún claro, 1 cda mayonesa, 2 cdas queso crema, pimentón dulce y piñones para servir",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DDUK2qQo-bE/?igsh=MXNzeGE5MGwxMDhwNQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1380,12 +1486,13 @@
   {
     "id": 107,
     "fecha": "1/1/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema antiinflamatoria de zanahoria y manzana",
     "categoria": "Crema o sopa",
     "ingPrincipales": "leche de coco, manzana, zanahoria",
     "ingCompletos": "8 zanahorias, 2 cebollas tiernas, jengibre, 2 manzanas, sal, aceite de oliva virgen extra, 1/2 litro leche de coco, pimienta y cúrcuma, 1 limón",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DEIgIx5N5HN/?igsh=MTB3dXk2MDRkcWFqMQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1393,12 +1500,13 @@
   {
     "id": 108,
     "fecha": "9/1/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Golden soup — crema depurativa de verduras y cúrcuma",
     "categoria": "Crema o sopa",
     "ingPrincipales": "verduras",
     "ingCompletos": "1 cebolla, 1 puerro, 2 dientes de ajo, 1/2 coliflor, 1 vaso de calabaza, 1 vaso de zanahoria, 1 vaso de apio, 1 puñado de anacardos, cúrcuma, jengibre, comino, canela, pimienta, sal",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DEfxcbIOOJK/?igsh=MXg4am5lYThwOXF3Yg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1406,12 +1514,13 @@
   {
     "id": 109,
     "fecha": "21/1/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Puerros gratinados con bechamel de coliflor",
     "categoria": "Verduras",
     "ingPrincipales": "puerros",
     "ingCompletos": "3-4 puerros, 1/2 taza de tacos de jamón, sal y pimienta, 3 cdas aceite de oliva virgen extra, 1/2 taza queso rallado; bechamel: 300 g coliflor cocida, 200 ml leche, sal, pimienta, nuez moscada, 2 cdas aceite de oliva virgen extra",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DFConcctMGC/?igsh=MTVkcjk5dG5heDVtag==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1419,12 +1528,13 @@
   {
     "id": 110,
     "fecha": "21/1/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DEA8emxx0FG/?igsh=emxkbWF5aHg3NHJ3",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1432,12 +1542,13 @@
   {
     "id": 111,
     "fecha": "12/2/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema de coliflor, pera y queso azul",
     "categoria": "Crema o sopa",
     "ingPrincipales": "aguacate, carne picada, cebolla, chile, cilantro, harina, piña",
     "ingCompletos": "1 puerro, 1 coliflor, 2 peras, 3 cdas de queso azul",
+    "foto": "",
     "notasChat": "Almuerzo o cena de burrito",
     "enlace": "https://www.instagram.com/reel/DF2HiwHt0O_/?igsh=MXR6NzVrazNzeHdlcQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1445,12 +1556,13 @@
   {
     "id": 112,
     "fecha": "16/3/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Torta de chocolate y plátano (mug cake)",
     "categoria": "Postre",
     "ingPrincipales": "chocolate",
     "ingCompletos": "1 plátano (cambur), 1 huevo, 2 cdas cacao en polvo, 1/2 cdta polvo de hornear, vainilla, chispas de chocolate",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DHIusrBA8o-/?igsh=MTl2bnhnd212NjJ5bg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1458,12 +1570,13 @@
   {
     "id": 113,
     "fecha": "18/3/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/15xBXsHnSs/",
     "estado": "Sin título — pendiente de abrir"
@@ -1471,12 +1584,13 @@
   {
     "id": 114,
     "fecha": "18/3/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Wraps de calabacín",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "",
     "ingCompletos": "1 calabacín grande, mozzarella rallada, sal, pimienta, aceite de oliva; relleno al gusto: ensalada, aguacate, salmón, salsa de queso fresco",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DHOpJ-hMvBL/?igsh=dGx0cDYyYWoxMWl3",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1484,12 +1598,13 @@
   {
     "id": 115,
     "fecha": "21/3/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Bowl de brócoli, pollo, quinoa y dátil",
     "categoria": "Ensalada",
     "ingPrincipales": "lechuga",
     "ingCompletos": "1/2 taza quinoa tricolor, 1 taza agua, sal y pimienta; 1 1/2 tazas kale o espinaca, 1 brócoli picado, 1/3 taza dátiles o arándanos deshidratados, 1/2 taza almendras tostadas, 1 1/4 taza pollo deshebrado; vinagreta: 1/3 taza aceite de oliva, 2 cdas vinagre balsámico, 1 cdta miel, sal, pimienta, limón",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DHV_-hTxh7f/?igsh=cnZkMG9jMmx2ZHcy",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1497,12 +1612,13 @@
   {
     "id": 116,
     "fecha": "22/3/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Web",
     "nombre": "Tortitas de avena y plátano (sin azúcar)",
     "categoria": "Postre",
     "ingPrincipales": "harina, plátano",
     "ingCompletos": "70 g harina de avena, 70 ml leche de avena o desnatada, 1 huevo mediano, plátano maduro, edulcorante (stevia o sucralosa), levadura, especias al gusto (canela, vainilla, nuez moscada, jengibre)",
+    "foto": "",
     "notasChat": "Crema queso azul pera y coliflor",
     "enlace": "https://dulcesdiabeticos.com/tortitas-avena-platano-saludables/",
     "estado": "Completa (web pública)"
@@ -1510,12 +1626,13 @@
   {
     "id": 117,
     "fecha": "15/4/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/12GLk1LfVGj/",
     "estado": "Sin título — pendiente de abrir"
@@ -1523,12 +1640,13 @@
   {
     "id": 118,
     "fecha": "18/4/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1ALKgS1g4m/",
     "estado": "Sin título — pendiente de abrir"
@@ -1536,12 +1654,13 @@
   {
     "id": 119,
     "fecha": "18/4/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/16PSkiTxfi/",
     "estado": "Sin título — pendiente de abrir"
@@ -1549,12 +1668,13 @@
   {
     "id": 120,
     "fecha": "18/4/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1CDFmt2kbB/",
     "estado": "Sin título — pendiente de abrir"
@@ -1562,12 +1682,13 @@
   {
     "id": 121,
     "fecha": "21/4/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/16N4d8uXgw/",
     "estado": "Sin título — pendiente de abrir"
@@ -1575,12 +1696,13 @@
   {
     "id": 122,
     "fecha": "9/6/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "Helado cremoso de queso cottage",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "400 g de queso Cottage (resto de ingredientes cortado, no se pudo desplegar el texto completo)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/v/1LDReMimyu/",
     "estado": "Parcial — solo el primer ingrediente visible, revisar manualmente"
@@ -1588,12 +1710,13 @@
   {
     "id": 123,
     "fecha": "13/6/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1WMp6LVwYQ/",
     "estado": "Sin título — pendiente de abrir"
@@ -1601,12 +1724,13 @@
   {
     "id": 124,
     "fecha": "5/8/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1ZL65PNeoz/",
     "estado": "Sin título — pendiente de abrir"
@@ -1614,12 +1738,13 @@
   {
     "id": 125,
     "fecha": "18/8/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Arroz blanco perfecto (método)",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "",
     "ingCompletos": "arroz, agua (técnica de lavado y medida sin cantidades exactas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DL5K645IiBi/?igsh=YzAyMDM1MGJkZA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1627,12 +1752,13 @@
   {
     "id": 126,
     "fecha": "18/8/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Instagram",
     "nombre": "Arroz con cosas peruano (lomo saltado)",
     "categoria": "Carne y aves",
     "ingPrincipales": "",
     "ingCompletos": "salsa: 6 cdas salsa de soja, 3 cdas salsa de ostras, 2 cdas vinagre; 300 g solomillo de ternera o redondo, 1/2 cdta ajo rallado, 1 cda vinagre, sal y pimienta, 1 cebolla morada, 1/2 ají amarillo, 1 tomate, cebolla china",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DMiR_vWoGbE/?igsh=YzAyMDM1MGJkZA==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1640,12 +1766,13 @@
   {
     "id": 127,
     "fecha": "18/8/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "TikTok",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.tiktok.com/@diegodoal/video/7514329628660731158",
     "estado": "Sin título — pendiente de abrir"
@@ -1653,12 +1780,13 @@
   {
     "id": 128,
     "fecha": "23/8/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crujiente de langostino en oblea de arroz",
     "categoria": "Aperitivo",
     "ingPrincipales": "carabineros",
     "ingCompletos": "langostinos cocidos, mayosiracha (mayonesa + sriracha), obleas/papel de arroz, aceite para freír",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/share/reel/BAGJqou3zX",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1666,12 +1794,13 @@
   {
     "id": 129,
     "fecha": "24/8/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Arroz blanco japonés perfecto",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "arroz",
     "ingCompletos": "300 g arroz (360 ml), 400-430 ml agua",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/share/reel/_wcx6iGrk",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1679,12 +1808,13 @@
   {
     "id": 130,
     "fecha": "7/9/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Crema de calabaza de otoño",
     "categoria": "Crema o sopa",
     "ingPrincipales": "",
     "ingCompletos": "calabaza (receta completa no detallada en el pie, solo mención)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/share/reel/_2BZmAAy5",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1692,12 +1822,13 @@
   {
     "id": 131,
     "fecha": "6/10/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Huevos horneados con brócoli y atún",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "4 huevos, brócoli rallado crudo, atún, salsa de tomate, aceitunas, queso rallado, sal, orégano, mozzarella",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/share/reel/BAR3ZL9lvc",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1705,12 +1836,13 @@
   {
     "id": 132,
     "fecha": "1/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1HvVfkLwTF/",
     "estado": "Sin título — pendiente de abrir"
@@ -1718,12 +1850,13 @@
   {
     "id": 133,
     "fecha": "6/11/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DPRl2RDimYD/?igsh=MTA3d3Jtb3RzY2RvaQ==",
     "estado": "Sin título — pendiente de abrir"
@@ -1731,12 +1864,13 @@
   {
     "id": 134,
     "fecha": "9/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "YouTube",
     "nombre": "TALLARINES",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.youtube.com/watch?v=cjKomuHFiXM&list=PLuPXdq8cpUVyBUM39rVzpwSPmJXzOrQCe&index=42",
     "estado": "Completar ingredientes"
@@ -1744,12 +1878,13 @@
   {
     "id": 135,
     "fecha": "9/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "YouTube",
     "nombre": "Butter chicken indio, versión sencilla",
     "categoria": "Carne y aves",
     "ingPrincipales": "pollo",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "hash de patatas",
     "enlace": "https://www.youtube.com/watch?v=sYwwH9okQ0w&list=PLuPXdq8cpUVyBUM39rVzpwSPmJXzOrQCe&index=57",
     "estado": "Vídeo corto — ingredientes solo en el vídeo"
@@ -1757,12 +1892,13 @@
   {
     "id": 136,
     "fecha": "9/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "YouTube",
     "nombre": "Chile con carne",
     "categoria": "Carne y aves",
     "ingPrincipales": "carne picada, chile",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.youtube.com/watch?v=Jx-5wBeNa5Q&list=PLuPXdq8cpUVyBUM39rVzpwSPmJXzOrQCe&index=66",
     "estado": "Completar ingredientes"
@@ -1770,12 +1906,13 @@
   {
     "id": 137,
     "fecha": "9/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "YouTube",
     "nombre": "noodles",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.youtube.com/watch?v=_58gGnYdqZg&list=PLuPXdq8cpUVyBUM39rVzpwSPmJXzOrQCe&index=111",
     "estado": "Completar ingredientes"
@@ -1783,12 +1920,13 @@
   {
     "id": 138,
     "fecha": "9/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "YouTube",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.youtube.com/watch?v=093RfPd8gZM&list=PLuPXdq8cpUVyBUM39rVzpwSPmJXzOrQCe&index=137",
     "estado": "Sin título — pendiente de abrir"
@@ -1796,12 +1934,13 @@
   {
     "id": 139,
     "fecha": "22/11/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Postre de chocolate en sartén (sin ingredientes en el texto)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DQUBxt6DGjh/?igsh=MWl0ZWxudDZpOTlqcw==",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1809,12 +1948,13 @@
   {
     "id": 140,
     "fecha": "22/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/19y1kVJxsK/",
     "estado": "Sin título — pendiente de abrir"
@@ -1822,12 +1962,13 @@
   {
     "id": 141,
     "fecha": "22/11/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1N4JZjChFA/",
     "estado": "Sin título — pendiente de abrir"
@@ -1835,12 +1976,13 @@
   {
     "id": 142,
     "fecha": "16/12/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pastel de salmón navideño",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "salmón",
     "ingCompletos": "500 g salmón, 1 cebolleta, 1 puerro, 3 huevos L, 150 ml leche evaporada o nata, 3-4 cdas salsa de tomate, sal y pimienta, mayonesa, eneldo para decorar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DSUvrntjUGV/?igsh=MnV5OGMzZDJxc3U1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1848,12 +1990,13 @@
   {
     "id": 143,
     "fecha": "17/12/25",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Corona navideña de hojaldre con salmón ahumado",
     "categoria": "Aperitivo",
     "ingPrincipales": "",
     "ingCompletos": "1 masa quebrada (pâte brisée), 1 yema de huevo, semillas de sésamo, 150 g salmón ahumado, 300 g queso crema, cebollino, sal, pimienta, 1 cda mostaza de miel, ralladura de media naranja, zumo de medio limón, aceite de oliva, 120 g granada, 80 g piñones tostados, eneldo",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DR_y2kRDFpl/?igsh=bWR2YXdhZXNxbWpn",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1861,12 +2004,13 @@
   {
     "id": 144,
     "fecha": "18/12/25",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/v/14RYhSDAhyC/",
     "estado": "Sin título — pendiente de abrir"
@@ -1874,12 +2018,13 @@
   {
     "id": 145,
     "fecha": "17/1/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pan de cuchara sin amasado",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "",
     "ingCompletos": "harina, agua, levadura (poca cantidad), sal, semillas, aceite (cantidades no especificadas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DTdpz_xiBf2/?igsh=MTkyM2pxcTdvOGd6MQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1887,12 +2032,13 @@
   {
     "id": 146,
     "fecha": "2/2/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Puerros gratinados con bechamel de calabacín",
     "categoria": "Verduras",
     "ingPrincipales": "",
     "ingCompletos": "6-8 puerros, bacon, aceite de oliva virgen extra, queso rallado (mozzarella o emmental); bechamel: 2 calabacines grandes, 1/2 cebolla, 150 ml leche, sal y pimienta, nuez moscada, 2 cdas queso crema opcional",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DT-SoiZjf2o/?igsh=MWprM2c4YW83amdtZQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1900,12 +2046,13 @@
   {
     "id": 147,
     "fecha": "26/3/26",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "Bizcochitos",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1GrpMhYMRE/",
     "estado": "Sin título — pendiente de abrir"
@@ -1913,12 +2060,13 @@
   {
     "id": 148,
     "fecha": "11/6/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Bizcocho de naranja en microondas (10 min)",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "1 naranja y media sin piel, 3 huevos M, 30 g almendra molida, 115 g harina de avena o arroz, 1 cdta levadura química, 1 cda aceite de oliva virgen extra, endulzante, canela en polvo",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DYIFa_8NS6E/?igsh=MWNpZHhoYjZqcWI0dQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1926,12 +2074,13 @@
   {
     "id": 149,
     "fecha": "11/6/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Bizcochitos fundentes de pistacho (microondas)",
     "categoria": "Postre",
     "ingPrincipales": "chocolate, harina",
     "ingCompletos": "3 huevos M, 200 g yogur griego, 1/2 cdta levadura química, 1/2 cdta canela, endulzante, 80 g avena, chocolate para la base, crema de pistacho para el relleno",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DX31N6gNg6m/?igsh=bThwd20yYzJwNHJ1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1939,12 +2088,13 @@
   {
     "id": 150,
     "fecha": "11/6/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pizza sin harinas, alta en proteína",
     "categoria": "Postre",
     "ingPrincipales": "harina",
     "ingCompletos": "pechuga de pollo triturada, huevo, parmesano rallado (masa); ingredientes de cobertura al gusto",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DXbgTMcjaQq/?igsh=MTY5anZqaGIyM2g3NQ==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1952,12 +2102,13 @@
   {
     "id": 151,
     "fecha": "11/6/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Pizza sin harinas, alta en proteína",
     "categoria": "Postre",
     "ingPrincipales": "harina",
     "ingCompletos": "pechuga de pollo triturada, huevo, parmesano rallado (masa); ingredientes de cobertura al gusto",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DY5LZDTNDbL/?igsh=aDg0amJjbzgzNHZ5",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1965,12 +2116,13 @@
   {
     "id": 152,
     "fecha": "11/6/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "(sin ingredientes en el pie de foto — cena con queso airfryer)",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "harina",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DWRC8rDjZuF/?igsh=MTFpY3ZzeGhiN2gwOA==",
     "estado": "Sin receta en el texto — pendiente de abrir manualmente"
@@ -1978,12 +2130,13 @@
   {
     "id": 153,
     "fecha": "1/7/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Paninis de garbanzo",
     "categoria": "Pasta, arroz y masas",
     "ingPrincipales": "",
     "ingCompletos": "1/2 bote garbanzos cocidos, 2 huevos, 1 cda queso cottage opcional, sal, orégano, pimienta, toppings al gusto (tomate, queso, pavo, champiñones, gorgonzola, aceitunas)",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DXC1P3eNyjh/?igsh=c21xbnJwMmQ4Ynh1",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -1991,12 +2144,13 @@
   {
     "id": 154,
     "fecha": "13/7/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Roll de pollo, ricotta y espinaca en papel de arroz",
     "categoria": "Carne y aves",
     "ingPrincipales": "",
     "ingCompletos": "pollo, ricotta, espinaca, papel de arroz",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DanmE0rtgOU/?igsh=aDk4a3dub3J2dThn",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -2004,12 +2158,13 @@
   {
     "id": 155,
     "fecha": "31/7/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Ceviche de langostinos con mango y coco",
     "categoria": "Pescado y marisco",
     "ingPrincipales": "",
     "ingCompletos": "1 aguacate, 1 mango, 1/2 cebolla morada, langostinos cocidos, cilantro o hierbabuena, 1/2 lata leche de coco, aceite de oliva virgen extra, 1 lima, sal y pimienta",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/reel/DbLAzj2NfNU/?igsh=MXZuN21ycDM0d2s5bg==",
     "estado": "Completa (recuperada de Instagram/Facebook)"
@@ -2017,12 +2172,13 @@
   {
     "id": 156,
     "fecha": "23/8/26",
-    "quien": "Juan",
+    "quien": "Juan Romero",
     "plataforma": "Facebook",
     "nombre": "(sin nombre)",
     "categoria": "",
     "ingPrincipales": "",
     "ingCompletos": "",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.facebook.com/share/r/1AuHqz465Z/",
     "estado": "Sin título — pendiente de abrir"
@@ -2030,12 +2186,13 @@
   {
     "id": 157,
     "fecha": "23/8/26",
-    "quien": "MariVí",
+    "quien": "AA_MariVí",
     "plataforma": "Instagram",
     "nombre": "Brownie proteico de banana y yogur griego",
     "categoria": "Postre",
     "ingPrincipales": "",
     "ingCompletos": "170 ml yogur griego, 4 huevos pequeños, 4 cdas cacao puro en polvo, 1 cdta levadura, 2 bananas grandes maduras, mermelada o miel para decorar",
+    "foto": "",
     "notasChat": "",
     "enlace": "https://www.instagram.com/p/DbrIxWIoKyQ/?img_index=4&igsi=MXRyczJsOHUxcDkwYg==",
     "estado": "Completa (recuperada de Instagram/Facebook) — nota: cuenta marca el contenido como generado con IA"
