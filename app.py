@@ -57,8 +57,12 @@ class SupabaseStore:
 
 
 def get_store():
-    if "supabase_url" in st.secrets and "supabase_service_role_key" in st.secrets:
+    has_url = "supabase_url" in st.secrets
+    has_key = "supabase_service_role_key" in st.secrets
+    if has_url and has_key:
         return SupabaseStore(st.secrets["supabase_url"], st.secrets["supabase_service_role_key"]), "Supabase compartido"
+    if has_url or has_key:
+        raise RuntimeError("Falta uno de los secretos de Supabase: supabase_url y supabase_service_role_key son obligatorios.")
     return SQLiteStore(), "SQLite local (solo pruebas)"
 
 
@@ -121,7 +125,7 @@ def inject_style():
     div[data-testid="stExpander"]{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}div[data-testid="stExpander"] details summary{padding:.75rem .9rem;font-family:Fraunces,serif;font-size:1.1rem}div[data-testid="stExpander"] details[open] summary{border-bottom:1px solid var(--line)}
     [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
     .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600;white-space:nowrap}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:2px solid var(--olive);border-radius:999px;color:var(--olive);font-weight:700;padding:6px 12px}.stPills [aria-pressed="true"]{background:var(--olive)!important;color:white!important;border-color:var(--olive)!important}
-    [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:.25rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
+    [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:-.35rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.source-action-space{height:.7rem}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
     </style>""", unsafe_allow_html=True)
 
 
@@ -158,7 +162,10 @@ def render_recipe(store, recipe):
         preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or "Sin ingredientes"
         st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div>', unsafe_allow_html=True)
         if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
-        if recipe["enlace"]: st.link_button("Ver receta original →", recipe["enlace"]); source_preview(recipe)
+        if recipe["enlace"]:
+            st.markdown('<div class="source-action-space"></div>', unsafe_allow_html=True)
+            st.link_button("Ver receta original →", recipe["enlace"])
+            source_preview(recipe)
         with st.expander("Editar receta y más detalles"):
             recipe_form(store, recipe, f"edit_{recipe['id']}")
             if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
@@ -166,8 +173,8 @@ def render_recipe(store, recipe):
 
 st.set_page_config(page_title="El recetario", page_icon="🍳", layout="wide", initial_sidebar_state="collapsed")
 inject_style()
-store, storage_name = get_store()
 try:
+    store, storage_name = get_store()
     imported = seed(store); recipes = [normalize(row) for row in store.all()]
 except Exception as exc:
     st.error("No se pudo conectar a la base de datos. Ejecuta schema.sql en Supabase y revisa los secretos."); st.exception(exc); st.stop()
