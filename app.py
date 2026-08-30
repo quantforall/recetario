@@ -165,7 +165,13 @@ def render_recipe(store, recipe):
         if recipe["enlace"]:
             st.markdown('<div class="source-action-space"></div>', unsafe_allow_html=True)
             st.link_button("Ver receta original →", recipe["enlace"])
-            source_preview(recipe)
+            video_key = f"video_{recipe['id']}"
+            if not st.session_state.get(video_key, False):
+                if st.button("Cargar vídeo", key=f"load_{recipe['id']}"):
+                    st.session_state[video_key] = True
+                    st.rerun()
+            if st.session_state.get(video_key, False):
+                source_preview(recipe)
         with st.expander("Editar receta y más detalles"):
             recipe_form(store, recipe, f"edit_{recipe['id']}")
             if st.button("Eliminar esta receta", key=f"delete_{recipe['id']}"): store.delete(recipe["id"]); st.rerun()
@@ -180,7 +186,7 @@ except Exception as exc:
     st.error("No se pudo conectar a la base de datos. Ejecuta schema.sql en Supabase y revisa los secretos."); st.exception(exc); st.stop()
 
 st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
-st.caption(f"{len(recipes)} recetas · {storage_name}")
+st.caption(f"{len(recipes)} recetas")
 if imported: st.success("Recetas iniciales importadas.")
 action_left, action_right, _ = st.columns([1.25, 1.6, 4.15])
 with action_left:
@@ -202,8 +208,17 @@ st.caption(f"{len(visible)} de {len(recipes)} recetas")
 if st.session_state.get("show_new_recipe", False):
     with st.expander("Nueva receta", expanded=True):
         recipe_form(store, {"id":str(uuid.uuid4()),"fecha":date.today().strftime("%-d/%-m/%y"),"plataforma":"Manual","estado":"Añadida a mano"}, "new_recipe", True)
-for start in range(0, len(visible), 2):
+
+page_size = 12
+if "recipes_visible_count" not in st.session_state:
+    st.session_state.recipes_visible_count = page_size
+visible_page = visible[:st.session_state.recipes_visible_count]
+for start in range(0, len(visible_page), 2):
     left, right = st.columns(2)
-    with left: render_recipe(store, visible[start])
-    if start + 1 < len(visible):
-        with right: render_recipe(store, visible[start + 1])
+    with left: render_recipe(store, visible_page[start])
+    if start + 1 < len(visible_page):
+        with right: render_recipe(store, visible_page[start + 1])
+if len(visible_page) < len(visible):
+    if st.button("Cargar más recetas", key="load_more_recipes"):
+        st.session_state.recipes_visible_count += page_size
+        st.rerun()
