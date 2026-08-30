@@ -92,6 +92,14 @@ def platform_label(platform):
     return {"Instagram":"IG", "Facebook":"FB", "YouTube":"YT", "TikTok":"TT", "Manual":"A MANO"}.get(platform, "WEB")
 
 
+def visible_title(recipe):
+    title = (recipe.get("nombre") or "").strip()
+    placeholder_markers = ("sin nombre", "contenido marcado como sensible", "sin ingredientes en el pie", "sin receta en el texto")
+    if not title or any(marker in title.lower() for marker in placeholder_markers):
+        return "Sin título"
+    return title
+
+
 def source_preview(recipe):
     """Mantiene las vistas previas de Instagram, Facebook y YouTube del HTML original."""
     url = recipe["enlace"]
@@ -133,20 +141,22 @@ def recipe_form(store, recipe, key, new=False):
 
 def render_recipe(store, recipe):
     category = html.escape(recipe["categoria"] or "Sin categoría")
-    state = "Receta completa" if recipe["ingredientes"] else (recipe["estado"] or "Pendiente")
-    dot_class = "made" if recipe["hecha"] else ("" if recipe["ingredientes"] else "pending")
+    category_class = " empty" if not recipe["categoria"] else ""
     with st.container(border=True):
-        st.markdown(f'''<div class="recipe-meta"><span class="cat{' empty' if not recipe['categoria'] else ''}">{category}</span><span class="stamp"><b>{platform_label(recipe['plataforma'])}</b><br>{html.escape(recipe['fecha'])}<br>{html.escape(recipe['quien'])}</span></div>''', unsafe_allow_html=True)
-        selected_fit = st.pills("FIT", ["FIT"], default=["FIT"] if recipe["fit"] else [], selection_mode="multi", label_visibility="collapsed", key=f"fit_{recipe['id']}")
-        if bool(selected_fit) != recipe["fit"]:
-            updated = dict(recipe)
-            updated["fit"] = bool(selected_fit)
-            store.upsert(updated)
-            st.rerun()
-        st.markdown(f'<div class="recipe-name">{html.escape(recipe["nombre"] or "(sin nombre)")}</div>', unsafe_allow_html=True)
+        category_column, fit_column = st.columns([5, 1])
+        with category_column:
+            st.markdown(f'<span class="cat{category_class}">{category}</span>', unsafe_allow_html=True)
+        with fit_column:
+            selected_fit = st.pills("FIT", ["FIT"], default=["FIT"] if recipe["fit"] else [], selection_mode="multi", label_visibility="collapsed", key=f"fit_{recipe['id']}")
+            if bool(selected_fit) != recipe["fit"]:
+                updated = dict(recipe)
+                updated["fit"] = bool(selected_fit)
+                store.upsert(updated)
+                st.rerun()
+        st.markdown(f'<div class="recipe-name">{html.escape(visible_title(recipe))}</div>', unsafe_allow_html=True)
         if recipe["foto"]: st.image(recipe["foto"], use_container_width=True)
-        preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or recipe["estado"] or "Sin ingredientes registrados todavía"
-        st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div><p class="status {dot_class}">● {html.escape(state)}</p>', unsafe_allow_html=True)
+        preview = recipe["ingredientes"] or recipe["ingredientes_principales"] or "Sin ingredientes"
+        st.markdown(f'<div class="recipe-preview">{html.escape(preview)}</div>', unsafe_allow_html=True)
         if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
         if recipe["enlace"]: st.link_button("Ver receta original →", recipe["enlace"]); source_preview(recipe)
         with st.expander("Editar receta y más detalles"):
