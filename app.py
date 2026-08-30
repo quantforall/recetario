@@ -126,6 +126,8 @@ def inject_style():
     [data-testid="stTextInput"] input,[data-testid="stTextArea"] textarea{background:var(--paper2);border-color:var(--line);color:var(--ink)}[data-testid="stTextInput"] input:focus,[data-testid="stTextArea"] textarea:focus{border-color:var(--clay);box-shadow:0 0 0 1px var(--clay)}
     .stButton button,[data-testid="stLinkButton"] a{border-radius:9px;border:0;background:var(--clay);color:white;font-family:Inter,sans-serif;font-weight:600;white-space:nowrap}.stButton button:hover,[data-testid="stLinkButton"] a:hover{background:var(--clay-deep);color:white;border:0}.stPills [data-baseweb="tag"]{background:var(--paper);border:2px solid var(--olive);border-radius:999px;color:var(--olive);font-weight:700;padding:6px 12px}.stPills [aria-pressed="true"]{background:var(--olive)!important;color:white!important;border-color:var(--olive)!important}
     [data-testid="stVerticalBlockBorderWrapper"]{background:var(--paper);border-color:var(--line)!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(43,38,32,.06),0 6px 16px rgba(43,38,32,.07)}.recipe-name{font-family:Fraunces,serif;font-weight:500;font-size:1.65rem;line-height:1.25;color:var(--ink);margin:-.35rem 0 .8rem}.recipe-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:.1rem 0 .8rem}.cat{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--olive);background:var(--olive-soft);padding:3px 8px;border-radius:6px}.cat.empty{background:var(--paper2);color:var(--ink-soft)}.stamp{border:1px dashed var(--line);border-radius:8px;padding:4px 7px;font:10px/1.45 'IBM Plex Mono',monospace;color:var(--ink-soft);text-align:right;transform:rotate(2deg)}.stamp b{color:var(--clay)}.recipe-preview{color:var(--ink-soft);font-size:.9rem;line-height:1.5;white-space:pre-wrap}.source-action-space{height:.7rem}.status{font-size:.78rem;color:var(--ink-soft)}.made{color:#5B8A56;font-weight:600}.pending{color:#9a7212;font-weight:600}.source-note{color:var(--ink-soft);font-size:.85rem;font-style:italic}
+    [data-testid="stVerticalBlock"]:has(.recetario-sticky-marker){position:sticky;top:0;z-index:90;background:var(--page);padding:10px 0 12px;border-bottom:1px solid var(--line)}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker),div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker),div[data-testid="stHorizontalBlock"]:has(.source-actions-marker){flex-wrap:nowrap!important;gap:.5rem!important}div[data-testid="stHorizontalBlock"]:has(.actions-row-marker)>div,div[data-testid="stHorizontalBlock"]:has(.recipe-chip-marker)>div,div[data-testid="stHorizontalBlock"]:has(.source-actions-marker)>div{min-width:0!important}.source-action-space{height:.7rem}
+    @media(max-width:600px){.block-container{padding-left:16px;padding-right:16px;padding-top:.75rem}h1{font-size:2.5rem!important;margin-bottom:.15rem!important}.stPills [data-baseweb="tag"]{font-size:.66rem;padding:3px 6px;letter-spacing:0}.stPills [data-baseweb="tag"] span{line-height:1.05}.stButton button,[data-testid="stLinkButton"] a{font-size:.86rem;padding:.55rem .6rem}.recipe-name{font-size:1.45rem}.source-action-space{height:.55rem}}
     </style>""", unsafe_allow_html=True)
 
 
@@ -149,6 +151,7 @@ def render_recipe(store, recipe):
     with st.container(border=True):
         category_column, fit_column = st.columns([5, 1])
         with category_column:
+            st.markdown('<div class="recipe-chip-marker"></div>', unsafe_allow_html=True)
             st.markdown(f'<span class="cat{category_class}">{category}</span>', unsafe_allow_html=True)
         with fit_column:
             selected_fit = st.pills("FIT", ["FIT"], default=["FIT"] if recipe["fit"] else [], selection_mode="multi", label_visibility="collapsed", key=f"fit_{recipe['id']}")
@@ -164,12 +167,16 @@ def render_recipe(store, recipe):
         if recipe["notas_origen"]: st.markdown(f'<p class="source-note">Notas del chat: {html.escape(recipe["notas_origen"])}</p>', unsafe_allow_html=True)
         if recipe["enlace"]:
             st.markdown('<div class="source-action-space"></div>', unsafe_allow_html=True)
-            st.link_button("Ver receta original →", recipe["enlace"])
-            video_key = f"video_{recipe['id']}"
-            if not st.session_state.get(video_key, False):
-                if st.button("Cargar vídeo", key=f"load_{recipe['id']}"):
-                    st.session_state[video_key] = True
-                    st.rerun()
+            source_column, video_column = st.columns(2)
+            with source_column:
+                st.markdown('<div class="source-actions-marker"></div>', unsafe_allow_html=True)
+                st.link_button("Ver receta original →", recipe["enlace"])
+            with video_column:
+                video_key = f"video_{recipe['id']}"
+                if not st.session_state.get(video_key, False):
+                    if st.button("Cargar vídeo", key=f"load_{recipe['id']}"):
+                        st.session_state[video_key] = True
+                        st.rerun()
             if st.session_state.get(video_key, False):
                 source_preview(recipe)
         with st.expander("Editar receta y más detalles"):
@@ -185,20 +192,23 @@ try:
 except Exception as exc:
     st.error("No se pudo conectar a la base de datos. Ejecuta schema.sql en Supabase y revisa los secretos."); st.exception(exc); st.stop()
 
-st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
-st.caption(f"{len(recipes)} recetas")
-if imported: st.success("Recetas iniciales importadas.")
-action_left, action_right, _ = st.columns([1.25, 1.6, 4.15])
-with action_left:
-    if st.button("↻ Actualizar", key="refresh"):
-        complete_missing_from_excel(store)
-        st.rerun()
-with action_right:
-    if st.button("＋ Nueva receta", key="new_recipe_button"):
-        st.session_state.show_new_recipe = not st.session_state.get("show_new_recipe", False)
-search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed")
-categories = sorted({r["categoria"] for r in recipes if r["categoria"]})
-selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed")
+with st.container():
+    st.markdown('<div class="recetario-sticky-marker"></div>', unsafe_allow_html=True)
+    st.markdown("<h1>El recetario</h1>", unsafe_allow_html=True)
+    st.caption(f"{len(recipes)} recetas")
+    if imported: st.success("Recetas iniciales importadas.")
+    action_left, action_right = st.columns(2)
+    with action_left:
+        st.markdown('<div class="actions-row-marker"></div>', unsafe_allow_html=True)
+        if st.button("↻ Actualizar", key="refresh", use_container_width=True):
+            complete_missing_from_excel(store)
+            st.rerun()
+    with action_right:
+        if st.button("＋ Nueva receta", key="new_recipe_button", use_container_width=True):
+            st.session_state.show_new_recipe = not st.session_state.get("show_new_recipe", False)
+    search = st.text_input("Buscar", placeholder="Buscar por nombre o ingrediente…", label_visibility="collapsed")
+    categories = sorted({r["categoria"] for r in recipes if r["categoria"]})
+    selected = st.pills("Categorías", ["Todas", "FIT"] + categories, default="Todas", selection_mode="single", label_visibility="collapsed")
 query = search.lower().strip()
 def matches(recipe):
     haystack = " ".join(str(recipe.get(field, "")) for field in ("nombre", "ingredientes", "ingredientes_principales", "notas")).lower()
